@@ -10,7 +10,7 @@ from .core import NAMES
 
 LIMITATIONS = [
     "规则仅覆盖有限词汇与场景；真实 LLM 也会漏判、过度解释或受表述影响。未触发扣分不代表已确认优质，mock 模式不具备真实语义评审能力。",
-    "输入没有订单、商品、政策或工具记录。待核实不是已证实幻觉；未检出断言也不等于完全无事实风险。",
+    "原始题目未提供订单、商品、政策或工具记录；补充证据依赖维护者确认来源。待核实不是已证实幻觉；未检出断言也不等于完全无事实风险。",
     "综合分在事实维度不可评时重新归一化，仅为暂定质量分，不能据此决定扩大自动回复覆盖。",
     "20 条样本没有抽样方案、日期和业务分布，不能外推总体质量，也不应进行上线前后的因果比较。",
     "复核标签由开发者参考已看过的定性注释整理；程序隔离避免直接读答案，但不能消除设计阶段的偏差。",
@@ -66,6 +66,7 @@ def markdown(payload):
         lines += [f"- [语义/{i['tag']}] {i['reason']} 证据：{i['quote']}" for i in r['semantic']['issues']]
         lines += [f"- [规则/{f['rule']}] {f['reason']} 证据（{'用户问题' if f['origin'] == 'question' else '自动回复'}）：{f['quote']}" for f in r["findings"]]
         lines += [f"- 建议：{a}" for a in r["suggestions"]]
+        lines += [f"- 量表一致性待复核：{a}" for a in r.get('review_flags',[])]
         lines += [f"- 事实核验：{r['grounding_state']}；该状态不表示已确认幻觉。", ""]
     v = payload.get("validation")
     lines += ["## 人工参考对照", ""]
@@ -92,6 +93,9 @@ def markdown(payload):
         lines += [f"- {x['id']} / {x['tag']} / {x['kind'].upper()}：{x['basis']}" for x in iv['disagreements']] or ['- 暂无分歧。']
     lines += ["", "## 逐条结果", "", "| ID | 场景 | 暂定/综合分 | 服务缺口 | 事实状态 |", "|---|---|---:|---|---|"]
     lines += [f"| {r['id']} | {r['intent']} | {r['total_score']} | {'是' if r['service_gap'] else '未检出'} | {r['grounding_state']} |" for r in payload["results"]]
+    flags = [(r['id'], flag) for r in payload['results'] for flag in r.get('review_flags',[])]
+    lines += ['', '## 量表内部一致性复核', '']
+    lines += [f'- {case_id}：{flag}' for case_id, flag in flags] or ['未检出已定义的评分/状态冲突；不代表人工已确认无误。']
     lines += ["", "## 局限性", ""] + [f"- {x}" for x in LIMITATIONS]
     lines += ["", "## 下一步", "", "1. 接入有版本与来源的政策、商品和工具记录，优先核实退款时效、质保、运费、补偿及平台功能。",
               "2. 针对通用回复建立澄清/查询/自助/转人工的能力边界，避免无能力的代操作承诺。",

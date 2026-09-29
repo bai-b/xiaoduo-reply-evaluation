@@ -1,10 +1,10 @@
 {
   "scope": "服务缺口与回顾性整理标签的一致性；不属于独立盲测或事实核验准确率。",
   "counts": {
-    "tp": 7,
-    "fp": 3,
-    "fn": 4,
-    "tn": 2
+    "tp": 6,
+    "fp": 1,
+    "fn": 5,
+    "tn": 4
   },
   "included": 16,
   "excluded": [
@@ -30,24 +30,24 @@
     }
   ],
   "unlabeled_ids": [],
-  "precision": 0.7,
-  "recall": 0.6364,
+  "precision": 0.8571,
+  "recall": 0.5455,
   "f1": 0.6667,
-  "agreement": 0.5625,
+  "agreement": 0.625,
   "details": [
     {
       "id": "case_01",
       "service_gap": true,
       "basis": "原注释：取不到快递，需要帮忙解决；未形成具体处理闭环。",
-      "predicted": true,
-      "outcome": "tp"
+      "predicted": false,
+      "outcome": "fn"
     },
     {
       "id": "case_02",
       "service_gap": true,
       "basis": "原注释：问具体商品，回复只讲一般规定，未获取或核实商品参数。",
-      "predicted": true,
-      "outcome": "tp"
+      "predicted": false,
+      "outcome": "fn"
     },
     {
       "id": "case_03",
@@ -81,8 +81,8 @@
       "id": "case_09",
       "service_gap": false,
       "basis": "原注释明确规则说明本身有价值；缺少追问作为轻微改进项。",
-      "predicted": true,
-      "outcome": "fp"
+      "predicted": false,
+      "outcome": "tn"
     },
     {
       "id": "case_10",
@@ -123,8 +123,8 @@
       "id": "case_16",
       "service_gap": false,
       "basis": "原注释：信息模糊时追问场景和预算基本合理。",
-      "predicted": true,
-      "outcome": "fp"
+      "predicted": false,
+      "outcome": "tn"
     },
     {
       "id": "case_18",
@@ -144,8 +144,8 @@
       "id": "case_20",
       "service_gap": true,
       "basis": "原注释：用户已表示操作困难，重复流程而未定位卡点。",
-      "predicted": false,
-      "outcome": "fn"
+      "predicted": true,
+      "outcome": "tp"
     }
   ]
 }

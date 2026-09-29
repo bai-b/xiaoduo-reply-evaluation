@@ -1,24 +1,24 @@
 {
   "metadata": {
-    "version": "3.0.0",
+    "version": "2.0.0",
     "mode": "llm",
     "model": "qwen3.8-max-0902",
     "input_file": "task3_auto_replies.json",
     "input_sha256": "7d431d59ef68c38181d7aeb03cb49c043c73e3fc4de6b325b7f24311c8077daf",
     "scorer_sha256": "6a76605accce32901365489ceb3fb0d4950e3fe21ef197323a022370ddf9665f",
     "code_sha256": {
-      "__init__.py": "c4788426c7449041bf14f8ca0e638a99782b7b0ff4df5a92e09a53f281918c67",
+      "__init__.py": "b8cf95b9d6aade3ddc56a1c93a4ae026676341a5ae33a10e598384b5a42a546d",
       "comparison.py": "1b681223f65c2f1e2b0c3eb29d1e2d3a07a0e95e02010063578623b6d3e9da12",
       "core.py": "6a76605accce32901365489ceb3fb0d4950e3fe21ef197323a022370ddf9665f",
-      "reports.py": "5e47c86d07a994f87754bbbe9221c2186ab780c5d22c65c77f428835963a3325",
-      "semantic.py": "6458e27c27884c03a7683e76f948176d58d22e9c6a5704c7c73a1b94d8fbcf7b",
+      "reports.py": "569bf6ec5332e5d22b38e6c794aa3032cabae188c842a1a7d3d0adb68cad2e01",
+      "semantic.py": "6db6050034b24a4157eba3153cf2e92604d8a8690d0df116268793013b8607bf",
       "validation.py": "ea7f8ce44bd36596a96533814692794a4dd3f1bea19c01281e524993f5277b8c"
     },
     "reference_sha256": "5995bf08b7fcb7aa47450e1a5cae22302677ee2ab74eb862fe62936b089f3c77",
     "labels_sha256": "7963471fa4c71726e1883bc5687045e7c2d0ff3f46950ec64226d4a9888174b5",
     "evidence_sha256": null,
     "issue_labels_sha256": "87b4f2dada88724ebf91486cd819c1da5a31a5f2a47667870731ed045ecec725",
-    "prompt_sha256": "eea4027d08d4bc0557acb48dc6ef1795590ff6ee38d11522dd98125a525fb107",
+    "prompt_sha256": "cee9e1cae9c553a70fc60f7a0123b55b5e9595b34c232f43ccffa37e3e3d5b29",
     "compare_prompt_sha256": "3db6fe3d954b2fde80bf07abba657a43eb98934bb5cd75928e16add61899f67e",
     "config": {
       "weights": {
@@ -30,9 +30,9 @@
       "hard_gate_cap": 49,
       "acceptable_threshold": 80,
       "service_gap_max_score": 2,
-      "prompt_version": "3.0.0"
+      "prompt_version": "2.0.0"
     },
-    "config_sha256": "5b2e66e5f5712628fbdb3379e8d69024dcbecc4f1e280411ce42e1b946094671",
+    "config_sha256": "92d6a0898ffeaf2bd697814617789e947085d1e9ad2e084df28df57f38f66d33",
     "evidence_count": 0,
     "runtime_llm_calls": 0,
     "cache_hits": 40,
@@ -45,57 +45,57 @@
   },
   "summary": {
     "count": 20,
-    "mean_score": 79.8,
+    "mean_score": 70.9,
     "provisional_count": 20,
-    "service_gap_count": 8,
+    "service_gap_count": 12,
     "capped_count": 1,
     "uncovered_count": 0,
-    "claim_count": 25,
+    "claim_count": 29,
     "verified_claim_count": 0,
     "claim_coverage": 0.0,
     "claim_statuses": {
       "supported": 0,
       "contradicted": 0,
-      "unverified": 25
+      "unverified": 29
     },
     "dimensions": {
       "relevance": {
         "name": "切题与一致性",
-        "mean": 88.8,
+        "mean": 78.8,
         "assessed": 20,
         "na": 0,
         "distribution": {
           "0": 0,
           "1": 0,
-          "2": 1,
-          "3": 7,
-          "4": 12
+          "2": 2,
+          "3": 13,
+          "4": 5
         }
       },
       "usefulness": {
         "name": "问题解决有效性",
-        "mean": 67.5,
+        "mean": 60.0,
         "assessed": 20,
         "na": 0,
         "distribution": {
           "0": 0,
           "1": 0,
-          "2": 8,
-          "3": 10,
-          "4": 2
+          "2": 12,
+          "3": 8,
+          "4": 0
         }
       },
       "tone": {
         "name": "语气与情境关怀",
-        "mean": 96.2,
+        "mean": 85.0,
         "assessed": 20,
         "na": 0,
         "distribution": {
           "0": 0,
           "1": 0,
           "2": 0,
-          "3": 3,
-          "4": 17
+          "3": 12,
+          "4": 8
         }
       },
       "grounding": {
@@ -114,8 +114,8 @@
     },
     "worst_ids": [
       "case_11",
-      "case_13",
-      "case_18"
+      "case_16",
+      "case_01"
     ],
     "common_findings": [
       {
@@ -159,16 +159,16 @@
       "auto_reply": "您好，如果快递放错了快递柜，您可以尝试联系快递员重新派送，或者到放错的快递柜去取。建议您先查看取件码确认具体位置。如果无法解决，请联系我们的客服，我们会协助您处理。",
       "intent": "取件困难",
       "scores": {
-        "relevance": 4,
-        "usefulness": 3,
-        "tone": 4,
+        "relevance": 3,
+        "usefulness": 2,
+        "tone": 3,
         "grounding": null
       },
-      "total_score": 88.3,
+      "total_score": 63.3,
       "provisional": true,
       "assessed_weight": 75,
       "score_capped": false,
-      "service_gap": false,
+      "service_gap": true,
       "grounding_state": "未检出可核查断言",
       "claims": [],
       "findings": [
@@ -192,7 +192,9 @@
         }
       ],
       "suggestions": [
-        "追问取件码状态及具体无法取出的表现，以便精准协助",
+        "应主动询问订单编号、快递公司及快递柜品牌，以便查询物流状态或指导具体取件流程。",
+        "应提供联系快递员的具体方式（如通过物流详情页），或说明如何申请快递柜远程开柜/转柜。",
+        "应在当前会话中直接引导用户提供信息并协助处理，而非让用户另行联系。",
         "在授权流程内收集最少必要的订单/商品信息，再查询；无查询能力时说明限制并给出明确入口。",
         "简短承认用户的困扰，并紧接解决步骤。"
       ],
@@ -204,43 +206,51 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "快递放错快递柜导致无法取出，寻求取件协助",
-          "emotion_trigger": "",
-          "next_step": "minor_gap",
-          "uncertainty": "用户是否持有正确取件码、放错的快递柜具体位置、客服是否有权限直接联系快递员或开柜"
-        },
         "scores": {
-          "relevance": 4,
-          "usefulness": 3,
-          "tone": 4,
+          "relevance": 3,
+          "usefulness": 2,
+          "tone": 3,
           "grounding": null
         },
         "rationales": {
-          "relevance": "准确理解快递放错柜且取不出的问题，给出的建议方向相关。",
-          "usefulness": "提供了联系快递员、去对应柜取件等可行路径，但未主动收集单号/取件码以定位具体卡点（如柜门打不开还是不知道哪个柜），需用户自行推进。",
-          "tone": "语气礼貌自然，适合中性求助场景。",
-          "grounding": "claims为空，无业务证据可供核实。"
+          "relevance": "回复理解了用户快递放错柜无法取出的问题，并给出了联系快递员、去放错的柜子取件等方向，但未针对'取不出来'这一核心障碍提供具体解锁或处理步骤。",
+          "usefulness": "建议'到放错的快递柜去取'与用户已说明的'取不出来'存在矛盾，缺乏可操作性；未主动追问订单号、快递公司、快递柜品牌等关键信息以便进一步协助，将问题推回给用户自行解决。",
+          "tone": "语气礼貌平和，但对用户当前无法取件的焦急情绪缺少共情表达。",
+          "grounding": "回复中未包含需要业务证据核实的事实断言，均为通用操作建议，无证据可供核查。"
         },
         "issues": [
           {
             "tag": "missing_clarification",
-            "severity": "minor",
             "origin": "question",
-            "quote": "取不出来",
-            "reason": "未确认是不知道放错在哪个柜、还是有取件码但柜机报错打不开，影响下一步处理路径的选择",
-            "suggestion": "追问取件码状态及具体无法取出的表现，以便精准协助"
+            "quote": "我的快递到了但是放错快递柜了，取不出来",
+            "reason": "客服未询问订单号、快递公司、快递柜平台等关键信息，导致无法提供针对性解决方案。",
+            "suggestion": "应主动询问订单编号、快递公司及快递柜品牌，以便查询物流状态或指导具体取件流程。"
+          },
+          {
+            "tag": "generic_answer",
+            "origin": "reply",
+            "quote": "您可以尝试联系快递员重新派送，或者到放错的快递柜去取",
+            "reason": "用户已明确表示'取不出来'，仍建议去放错的柜子取件属于通用话术，未针对具体障碍给出解决办法。",
+            "suggestion": "应提供联系快递员的具体方式（如通过物流详情页），或说明如何申请快递柜远程开柜/转柜。"
+          },
+          {
+            "tag": "passive_service",
+            "origin": "reply",
+            "quote": "如果无法解决，请联系我们的客服，我们会协助您处理",
+            "reason": "当前对话本身即为客服渠道，却让用户再联系客服，属于被动推诿且未实际执行协助。",
+            "suggestion": "应在当前会话中直接引导用户提供信息并协助处理，而非让用户另行联系。"
           }
         ],
         "additional_claims": []
       },
       "fusion_actions": [],
       "issue_tags": [
-        "missing_clarification"
+        "generic_answer",
+        "missing_clarification",
+        "passive_service"
       ],
       "risk_quotes": [],
-      "quality_status": "可接受（暂定）",
-      "review_flags": [],
+      "quality_status": "需要改进",
       "semantic_mode": "llm",
       "reference": {
         "id": "case_01",
@@ -287,16 +297,16 @@
       "auto_reply": "您好，关于充电宝是否能带上飞机，根据民航局规定，额定能量不超过100Wh的充电宝可以随身携带上飞机，但不能托运。建议您查看充电宝的额定容量标识。如有疑问，请咨询具体航空公司。",
       "intent": "出行适用性",
       "scores": {
-        "relevance": 4,
-        "usefulness": 3,
+        "relevance": 3,
+        "usefulness": 2,
         "tone": 4,
         "grounding": null
       },
-      "total_score": 88.3,
+      "total_score": 68.3,
       "provisional": true,
       "assessed_weight": 75,
       "score_capped": false,
-      "service_gap": false,
+      "service_gap": true,
       "grounding_state": "待核实",
       "claims": [
         {
@@ -321,7 +331,8 @@
         }
       ],
       "suggestions": [
-        "可追问用户充电宝的具体型号或额定能量（Wh），以便直接告知是否符合登机要求。",
+        "应询问用户所指充电宝的型号，或主动根据订单/商品信息核实额定能量后给出明确答复。",
+        "在提供通用规则的同时，应尝试获取该商品的额定能量信息并直接告知是否符合要求。",
         "在授权流程内收集最少必要的订单/商品信息，再查询；无查询能力时说明限制并给出明确入口。",
         "将待核实断言关联到真实政策、商品参数或工具记录；核实前避免作确定性承诺。"
       ],
@@ -333,48 +344,43 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "询问特定充电宝能否带上飞机",
-          "emotion_trigger": "",
-          "next_step": "minor_gap",
-          "uncertainty": "用户未提供具体充电宝型号或额定能量参数，客服无法直接判断该特定产品是否符合规定"
-        },
         "scores": {
-          "relevance": 4,
-          "usefulness": 3,
+          "relevance": 3,
+          "usefulness": 2,
           "tone": 4,
           "grounding": null
         },
         "rationales": {
-          "relevance": "正确理解用户关于充电宝登机的核心诉求，给出了相关民航规定。",
-          "usefulness": "提供了通用规则和自查建议，但用户问的是'这个'充电宝，客服未追问具体型号或主动核实参数以给出确定结论，缺少个性化定位。",
-          "tone": "中性咨询场景下回复礼貌自然，无问题。",
-          "grounding": "claims中引用的民航局规定状态为unverified且无业务证据支持，按规则赋null。"
+          "relevance": "回复围绕充电宝能否带上飞机展开，方向正确，但未针对用户所说的'这个充电宝'确认具体型号或参数，未直接回答该商品是否合规。",
+          "usefulness": "提供了民航局通用规定并建议查看标识，但用户问的是'这个充电宝'，客服未主动查询或询问具体产品额定能量，也未告知如何换算Wh，需要用户自行判断，执行性不足。",
+          "tone": "礼貌、简洁，语气专业得体。",
+          "grounding": "回复中关于民航局规定的断言未被提供的业务证据支持，但也无证据表明其错误，按规则应为null。"
         },
         "issues": [
           {
             "tag": "missing_clarification",
-            "severity": "minor",
             "origin": "question",
             "quote": "这个充电宝能带上飞机吗",
-            "reason": "用户指代特定充电宝但未提供型号或容量信息，客服仅给出通用规则让用户自行查看标识，未主动追问具体对象以给出明确答复。",
-            "suggestion": "可追问用户充电宝的具体型号或额定能量（Wh），以便直接告知是否符合登机要求。"
+            "reason": "用户指代特定商品，客服未追问或核实该充电宝的具体型号及额定能量，无法给出针对性结论。",
+            "suggestion": "应询问用户所指充电宝的型号，或主动根据订单/商品信息核实额定能量后给出明确答复。"
+          },
+          {
+            "tag": "generic_answer",
+            "origin": "reply",
+            "quote": "建议您查看充电宝的额定容量标识。如有疑问，请咨询具体航空公司。",
+            "reason": "仅给出通用政策和建议，未结合用户所购商品提供具体判断，缺乏针对性。",
+            "suggestion": "在提供通用规则的同时，应尝试获取该商品的额定能量信息并直接告知是否符合要求。"
           }
         ],
-        "additional_claims": [
-          {
-            "quote": "根据民航局规定，额定能量不超过100Wh的充电宝可以随身携带上飞机，但不能托运",
-            "reason": "需要民航局关于充电宝登机的官方政策文件或航空公司执行标准作为业务证据"
-          }
-        ]
+        "additional_claims": []
       },
       "fusion_actions": [],
       "issue_tags": [
+        "generic_answer",
         "missing_clarification"
       ],
       "risk_quotes": [],
-      "quality_status": "可接受（暂定）",
-      "review_flags": [],
+      "quality_status": "需要改进",
       "semantic_mode": "llm",
       "reference": {
         "id": "case_02",
@@ -413,12 +419,12 @@
       "auto_reply": "退款到账时间取决于退款方式和银行处理速度。一般情况下：原路退回（支付宝/微信）1-3个工作日，银行卡退款3-7个工作日，信用卡退款5-15个工作日。您可以在订单详情页查看退款进度。如果超时未到账，请联系客服。",
       "intent": "退款进度",
       "scores": {
-        "relevance": 4,
+        "relevance": 3,
         "usefulness": 3,
-        "tone": 4,
+        "tone": 3,
         "grounding": null
       },
-      "total_score": 88.3,
+      "total_score": 75.0,
       "provisional": true,
       "assessed_weight": 75,
       "score_capped": false,
@@ -433,6 +439,15 @@
           "status": "unverified",
           "source": null,
           "rationale": "未提供与此断言对应的业务证据；不能据此认定内容错误。"
+        },
+        {
+          "quote": "您可以在订单详情页查看退款进度。",
+          "types": [
+            "语义补充"
+          ],
+          "status": "unverified",
+          "source": null,
+          "rationale": "该断言假设平台存在订单详情页且可查看退款进度，属于产品功能声明，需要业务证据确认是否属实。"
         }
       ],
       "findings": [
@@ -447,7 +462,9 @@
         }
       ],
       "suggestions": [
-        "在给出通用时效后，可主动询问用户的订单号或退款方式以便进一步核查。",
+        "在提供通用时效的同时，询问用户的订单号或使用的支付方式，以便核实具体退款状态。",
+        "先引导用户提供订单信息，再结合实际情况给出更精准的到账预估。",
+        "开头增加简短的共情语句，如'理解您着急收到退款的心情'。",
         "在授权流程内收集最少必要的订单/商品信息，再查询；无查询能力时说明限制并给出明确入口。",
         "将待核实断言关联到真实政策、商品参数或工具记录；核实前避免作确定性承诺。"
       ],
@@ -459,48 +476,56 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "用户询问退款到账时间",
-          "emotion_trigger": "",
-          "next_step": "minor_gap",
-          "uncertainty": "未确认用户具体订单及退款方式，无法给出精确到账时间"
-        },
         "scores": {
-          "relevance": 4,
+          "relevance": 3,
           "usefulness": 3,
-          "tone": 4,
+          "tone": 3,
           "grounding": null
         },
         "rationales": {
-          "relevance": "直接回应了退款到账时间的核心诉求，按不同支付方式分类说明，内部一致。",
-          "usefulness": "提供了各渠道通用时效并指引查看进度，但未追问用户具体订单或退款方式以定位实际状态，属于合理路径但缺辅助条件。",
-          "tone": "中性咨询场景下语气自然、礼貌，无不当表述。",
-          "grounding": "claims中时效数据为unverified且无业务证据支持，按规则赋null。"
+          "relevance": "回复围绕退款到账时间展开，覆盖了常见支付方式的时效说明，但未确认用户具体订单和退款方式，存在轻微缺口。",
+          "usefulness": "提供了各渠道的参考时效及查看进度的自助路径（订单详情页），并给出超时后的处理建议，具有可执行性；但未主动询问用户的具体订单或支付方式以提供精准信息。",
+          "tone": "语气客观礼貌、表达简洁，但缺少对用户等待退款的共情回应。",
+          "grounding": "回复中的退款时效为事实断言，claims 已标注为 unverified，无业务证据支持也无已证实矛盾，按规则必须为 null。"
         },
         "issues": [
           {
             "tag": "missing_clarification",
-            "severity": "minor",
             "origin": "question",
             "quote": "退款什么时候能到账",
-            "reason": "未提供订单号或退款方式，客服无法核实该笔退款的实际处理进度和确切到账时间。",
-            "suggestion": "在给出通用时效后，可主动询问用户的订单号或退款方式以便进一步核查。"
+            "reason": "用户未提供订单号或退款方式，客服直接给出通用时效而未追问具体信息，无法针对性解决该用户的实际进度查询需求。",
+            "suggestion": "在提供通用时效的同时，询问用户的订单号或使用的支付方式，以便核实具体退款状态。"
+          },
+          {
+            "tag": "generic_answer",
+            "origin": "reply",
+            "quote": "退款到账时间取决于退款方式和银行处理速度。一般情况下：原路退回（支付宝/微信）1-3个工作日，银行卡退款3-7个工作日，信用卡退款5-15个工作日。",
+            "reason": "仅给出通用政策说明，未结合用户具体订单情况进行个性化解答。",
+            "suggestion": "先引导用户提供订单信息，再结合实际情况给出更精准的到账预估。"
+          },
+          {
+            "tag": "insufficient_empathy",
+            "origin": "reply",
+            "quote": "退款到账时间取决于退款方式和银行处理速度。",
+            "reason": "用户询问退款到账时间通常带有焦急情绪，回复直接进入政策说明，缺少安抚或理解性表达。",
+            "suggestion": "开头增加简短的共情语句，如'理解您着急收到退款的心情'。"
           }
         ],
         "additional_claims": [
           {
-            "quote": "原路退回（支付宝/微信）1-3个工作日，银行卡退款3-7个工作日，信用卡退款5-15个工作日",
-            "reason": "需要平台退款政策文件以核实各支付渠道的具体到账时效标准。"
+            "quote": "您可以在订单详情页查看退款进度。",
+            "reason": "该断言假设平台存在订单详情页且可查看退款进度，属于产品功能声明，需要业务证据确认是否属实。"
           }
         ]
       },
       "fusion_actions": [],
       "issue_tags": [
+        "generic_answer",
+        "insufficient_empathy",
         "missing_clarification"
       ],
       "risk_quotes": [],
-      "quality_status": "可接受（暂定）",
-      "review_flags": [],
+      "quality_status": "需要改进",
       "semantic_mode": "llm",
       "reference": {
         "id": "case_03",
@@ -576,7 +601,7 @@
         }
       ],
       "suggestions": [
-        "在提供通用排查后，主动询问订单号或产品型号以便进一步协助处理。",
+        "在提供通用排查步骤的同时，询问用户耳机的品牌和型号，以便给出更精准的操作指引。",
         "先说明可核实的售后选择，由用户决定是否尝试简短排查。",
         "将待核实断言关联到真实政策、商品参数或工具记录；核实前避免作确定性承诺。"
       ],
@@ -588,12 +613,6 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "报告新购蓝牙耳机左耳无声故障，寻求解决或售后处理",
-          "emotion_trigger": "",
-          "next_step": "ready",
-          "uncertainty": "未确认具体品牌/型号、购买平台及订单信息；客服是否具备代操作退换货权限未知"
-        },
         "scores": {
           "relevance": 4,
           "usefulness": 3,
@@ -601,27 +620,21 @@
           "grounding": null
         },
         "rationales": {
-          "relevance": "正确识别单侧无声故障诉求，提供排查步骤和质保方案，内部一致。",
-          "usefulness": "给出可执行的排查步骤及明确的售后路径（退货退款或换新），但未核实具体订单/型号以直接推进处理，缺少进一步协助入口。",
-          "tone": "开头致歉，语气自然礼貌，中性咨询下回应得当。",
-          "grounding": "claims中7天质保政策标记为unverified且无业务证据支持，按规则赋null。"
+          "relevance": "准确识别用户蓝牙耳机左耳无声的故障诉求，提供了排查步骤和后续售后方案，覆盖必要事项且内部一致。",
+          "usefulness": "给出了三项具体可执行的自助排查步骤，并说明排查无效后的退换路径。但'7天质保期'表述不够严谨（通常为7天无理由退货或15天换货），且未询问耳机型号以提供更具针对性的重置方法，轻微影响针对性。",
+          "tone": "开头表达歉意，语气礼貌专业，对用户购买仅三天即出现故障的情况给予了合理的安抚与解决路径。",
+          "grounding": "回复中关于'7天质保期内可申请退货退款或换新'的政策断言无业务证据支持，状态为unverified，无法核实真伪，按规则设为null。"
         },
         "issues": [
           {
             "tag": "missing_clarification",
-            "severity": "minor",
             "origin": "question",
             "quote": "我买的蓝牙耳机左耳没声音了",
-            "reason": "未询问耳机品牌/型号或订单号，无法直接定位对象并推进退换货流程。",
-            "suggestion": "在提供通用排查后，主动询问订单号或产品型号以便进一步协助处理。"
+            "reason": "未询问耳机具体品牌或型号，不同型号的重置或配对操作可能存在差异，缺少该信息可能导致通用排查步骤不完全适用。",
+            "suggestion": "在提供通用排查步骤的同时，询问用户耳机的品牌和型号，以便给出更精准的操作指引。"
           }
         ],
-        "additional_claims": [
-          {
-            "quote": "由于在7天质保期内，您可以申请退货退款或换新",
-            "reason": "需要对应平台或品牌的退换货时效政策文件来核实该断言。"
-          }
-        ]
+        "additional_claims": []
       },
       "fusion_actions": [],
       "issue_tags": [
@@ -631,7 +644,6 @@
         "如果问题仍然存在，由于在7天质保期内，您可以申请退货退款或换新"
       ],
       "quality_status": "高风险待复核",
-      "review_flags": [],
       "semantic_mode": "llm",
       "reference": {
         "id": "case_04",
@@ -696,6 +708,7 @@
       ],
       "findings": [],
       "suggestions": [
+        "在询问前先确认是否已有历史工单或上下文记录，若有则直接引用并推进处理",
         "将待核实断言关联到真实政策、商品参数或工具记录；核实前避免作确定性承诺。"
       ],
       "rule_coverage": "covered",
@@ -706,12 +719,6 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "投诉等待时间过长及客服态度差",
-          "emotion_trigger": "你们客服态度太差了等了20分钟都没人理我",
-          "next_step": "ready",
-          "uncertainty": "无"
-        },
         "scores": {
           "relevance": 4,
           "usefulness": 3,
@@ -719,24 +726,28 @@
           "grounding": null
         },
         "rationales": {
-          "relevance": "直接回应了用户关于等待和态度的投诉，并询问原始问题以继续处理。",
-          "usefulness": "已道歉并主动承接处理，但需用户补充原始诉求才能推进具体问题解决。",
-          "tone": "充分承认用户的不满情绪，表达歉意并承诺立即处理，回应得当。",
-          "grounding": "claims中服务承诺为unverified，无矛盾也无完全支持的业务证据。"
+          "relevance": "准确识别用户因长时间等待产生的不满情绪，先致歉安抚再询问具体问题，覆盖了用户诉求的核心要素。",
+          "usefulness": "主动询问用户遇到的问题并表示立即处理，方向正确；但缺少对20分钟等待原因的任何解释或补偿说明，且未提供如自助查询等替代路径，可执行性略有不足。",
+          "tone": "语气诚恳、尊重，正面回应了用户的负面情绪，表达重视并承诺改进，安抚效果良好。",
+          "grounding": "回复中关于加强客服团队培训的承诺无业务证据支持，但也无法证实为错误，依据规则应判为null。"
         },
-        "issues": [],
-        "additional_claims": [
+        "issues": [
           {
-            "quote": "同时我们会加强客服团队的培训，避免类似情况再次发生",
-            "reason": "需要业务证据证明是否有对应的内部培训改进机制或流程"
+            "tag": "missing_clarification",
+            "origin": "reply",
+            "quote": "请问您遇到了什么问题？",
+            "reason": "用户可能已在排队前提交了问题描述，直接要求重新描述可能增加用户负担和挫败感",
+            "suggestion": "在询问前先确认是否已有历史工单或上下文记录，若有则直接引用并推进处理"
           }
-        ]
+        ],
+        "additional_claims": []
       },
       "fusion_actions": [],
-      "issue_tags": [],
+      "issue_tags": [
+        "missing_clarification"
+      ],
       "risk_quotes": [],
       "quality_status": "可接受（暂定）",
-      "review_flags": [],
       "semantic_mode": "llm",
       "reference": {
         "id": "case_05",
@@ -775,10 +786,10 @@
       "scores": {
         "relevance": 3,
         "usefulness": 2,
-        "tone": 4,
+        "tone": 3,
         "grounding": null
       },
-      "total_score": 68.3,
+      "total_score": 63.3,
       "provisional": true,
       "assessed_weight": 75,
       "score_capped": false,
@@ -797,8 +808,9 @@
         }
       ],
       "suggestions": [
-        "在列出常见原因后，主动询问优惠券名称/编号、尝试购买的商品或订单号，以便进一步核实。",
-        "追问优惠券类型/编号及当前尝试下单的商品信息。",
+        "在列出常见原因后，主动请用户提供优惠券名称、编号或相关订单信息，以便进一步协助排查。",
+        "在通用原因基础上引导用户提供具体信息，或告知如何在App内查看该优惠券的详细使用规则。",
+        "应直接表示可以协助核实，并请用户提供相关信息以便在当前会话中处理。",
         "在授权流程内收集最少必要的订单/商品信息，再查询；无查询能力时说明限制并给出明确入口。"
       ],
       "rule_coverage": "covered",
@@ -809,40 +821,39 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "用户反馈优惠券无法使用，需要排查原因或获得操作帮助",
-          "emotion_trigger": "",
-          "next_step": "minor_gap",
-          "uncertainty": "缺少具体优惠券信息、订单/商品上下文；不确定客服是否有工具直接查询用户优惠券状态"
-        },
         "scores": {
           "relevance": 3,
           "usefulness": 2,
-          "tone": 4,
+          "tone": 3,
           "grounding": null
         },
         "rationales": {
-          "relevance": "主题正确，列出了优惠券无法使用的常见原因，但未针对用户具体情况追问。",
-          "usefulness": "用户已遇到使用失败，回复仅列出通用可能原因并让用户自行检查，未主动收集优惠券编号、适用商品等关键信息以定位卡点，实际推动力有限。",
-          "tone": "语气礼貌中性，无情绪触发场景，表现正常。",
-          "grounding": "无 claims 提供业务证据，内容为通用常识，不涉及事实核查。"
+          "relevance": "回复围绕优惠券无法使用的常见原因进行了解答，方向正确，但未针对用户具体订单或优惠券进行排查，覆盖不够精准。",
+          "usefulness": "仅提供了通用排查方向和让用户自行检查的建议，未主动询问具体优惠券信息或订单号以便进一步定位问题，也未提供自助查询路径，可执行性偏弱。",
+          "tone": "语气礼貌规范，但面对用户可能存在的困惑或不满情绪，缺少安抚性表达。",
+          "grounding": "回复内容为通用规则说明，未涉及具体业务证据，无法核实也无矛盾，按规则设为null。"
         },
         "issues": [
           {
-            "tag": "generic_answer",
-            "severity": "minor",
-            "origin": "reply",
-            "quote": "优惠券无法使用可能有以下原因：1.未达到使用门槛金额 2.商品不在优惠券适用范围内 3.优惠券已过期 4.优惠券已使用过。请您检查优惠券的使用规则。",
-            "reason": "用户已在操作中遇到问题，回复仅提供通用排查列表，未结合用户具体优惠券进行个性化定位。",
-            "suggestion": "在列出常见原因后，主动询问优惠券名称/编号、尝试购买的商品或订单号，以便进一步核实。"
-          },
-          {
             "tag": "missing_clarification",
-            "severity": "minor",
             "origin": "question",
             "quote": "优惠券怎么用不了",
-            "reason": "用户未提供具体是哪张优惠券、用于什么商品，导致无法直接定位问题。",
-            "suggestion": "追问优惠券类型/编号及当前尝试下单的商品信息。"
+            "reason": "用户未提供具体优惠券或订单信息，客服未追问是哪张优惠券、用于哪个商品或订单，导致无法针对性解决问题。",
+            "suggestion": "在列出常见原因后，主动请用户提供优惠券名称、编号或相关订单信息，以便进一步协助排查。"
+          },
+          {
+            "tag": "generic_answer",
+            "origin": "reply",
+            "quote": "优惠券无法使用可能有以下原因：1.未达到使用门槛金额 2.商品不在优惠券适用范围内 3.优惠券已过期 4.优惠券已使用过。",
+            "reason": "仅给出通用原因列表，未结合用户实际情况做针对性分析。",
+            "suggestion": "在通用原因基础上引导用户提供具体信息，或告知如何在App内查看该优惠券的详细使用规则。"
+          },
+          {
+            "tag": "passive_service",
+            "origin": "reply",
+            "quote": "如果确认符合使用条件仍无法使用，请联系客服核实。",
+            "reason": "当前对话本身即为客服渠道，却让用户再次联系客服，属于被动推回且逻辑不当。",
+            "suggestion": "应直接表示可以协助核实，并请用户提供相关信息以便在当前会话中处理。"
           }
         ],
         "additional_claims": []
@@ -850,13 +861,11 @@
       "fusion_actions": [],
       "issue_tags": [
         "generic_answer",
-        "missing_clarification"
+        "missing_clarification",
+        "passive_service"
       ],
       "risk_quotes": [],
       "quality_status": "需要改进",
-      "review_flags": [
-        "下一步被标为轻微缺口，但有效性已判明显缺口，需要复核严重程度。"
-      ],
       "semantic_mode": "llm",
       "reference": {
         "id": "case_06",
@@ -948,7 +957,7 @@
         }
       ],
       "suggestions": [
-        "在提示自助核实的同时，可询问用户账号信息以便进一步协助排查。",
+        "在给出通用安全建议后，可请用户提供短信发送方号码或截图以便进一步核实。",
         "在授权流程内收集最少必要的订单/商品信息，再查询；无查询能力时说明限制并给出明确入口。",
         "在保留不要点击可疑链接等建议的同时，说明可通过官方渠道核实。",
         "将待核实断言关联到真实政策、商品参数或工具记录；核实前避免作确定性承诺。"
@@ -961,12 +970,6 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "核实异地登录短信真伪并获取安全指导",
-          "emotion_trigger": "",
-          "next_step": "ready",
-          "uncertainty": "客服无法直接查询用户账号状态，需用户自行通过官方渠道核实"
-        },
         "scores": {
           "relevance": 4,
           "usefulness": 3,
@@ -974,19 +977,18 @@
           "grounding": null
         },
         "rationales": {
-          "relevance": "正确理解用户对短信真伪的疑虑，给出防诈骗提醒和核实路径，内部一致。",
-          "usefulness": "提供了不点击链接、通过官方渠道自查、改密、开启二次验证等可执行步骤；但未主动询问账号信息以便协助核查，属于合理追问缺失。",
-          "tone": "中性咨询场景下语气自然、专业，无不当表述。",
-          "grounding": "claims中平台功能均为unverified，无已支持或已矛盾证据，按规则赋null。"
+          "relevance": "直接回应了用户关于异地登录短信真伪的疑问，并提供了安全处理建议，覆盖必要事项。",
+          "usefulness": "给出了不点击链接、通过官方渠道自查、修改密码等可执行步骤，但未主动询问短信来源或内容细节以协助进一步判断，且部分功能（查看登录记录、二次验证、冻结账号）未确认平台是否支持。",
+          "tone": "语气专业冷静，提醒不要点击链接体现了对用户安全的关切，简洁得体。",
+          "grounding": "claims 已标注平台功能为 unverified，无业务证据支持或反驳，按规则设为 null。"
         },
         "issues": [
           {
             "tag": "missing_clarification",
-            "severity": "minor",
             "origin": "question",
             "quote": "我收到短信说账号异地登录了是真的吗",
-            "reason": "用户希望确认真伪，客服未询问账号标识以便协助查看登录记录，仅引导自助核实。",
-            "suggestion": "在提示自助核实的同时，可询问用户账号信息以便进一步协助排查。"
+            "reason": "客服未询问短信发送号码、具体内容或用户近期是否有异地操作，无法针对性帮助用户初步判断真伪。",
+            "suggestion": "在给出通用安全建议后，可请用户提供短信发送方号码或截图以便进一步核实。"
           }
         ],
         "additional_claims": []
@@ -997,7 +999,6 @@
       ],
       "risk_quotes": [],
       "quality_status": "可接受（暂定）",
-      "review_flags": [],
       "semantic_mode": "llm",
       "reference": {
         "id": "case_07",
@@ -1039,12 +1040,12 @@
       "auto_reply": "您好，这款手机壳采用的是TPU软胶材质，具有较好的防摔性能和手感。如果您需要更具体的材质信息，可以查看商品详情页的参数说明，或联系客服获取。",
       "intent": "商品材质",
       "scores": {
-        "relevance": 4,
-        "usefulness": 4,
+        "relevance": 3,
+        "usefulness": 3,
         "tone": 4,
         "grounding": null
       },
-      "total_score": 100.0,
+      "total_score": 80.0,
       "provisional": true,
       "assessed_weight": 75,
       "score_capped": false,
@@ -1063,6 +1064,7 @@
       ],
       "findings": [],
       "suggestions": [
+        "在告知TPU材质后，简要说明其更接近软胶/硅胶的手感还是偏硬质塑料，帮助用户理解。",
         "将待核实断言关联到真实政策、商品参数或工具记录；核实前避免作确定性承诺。"
       ],
       "rule_coverage": "covered",
@@ -1073,37 +1075,40 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "询问手机壳的具体材质（硅胶还是塑料）",
-          "emotion_trigger": "",
-          "next_step": "ready",
-          "uncertainty": "用户未指明具体商品，回复直接给出TPU材质，可能基于会话上下文中的商品链接或图片，但当前数据中缺失该上下文"
-        },
         "scores": {
-          "relevance": 4,
-          "usefulness": 4,
+          "relevance": 3,
+          "usefulness": 3,
           "tone": 4,
           "grounding": null
         },
         "rationales": {
-          "relevance": "直接回答了用户关于材质的问题，明确指出是TPU软胶，切题且内部一致。",
-          "usefulness": "给出了明确材质答案并解释了特性，同时提供了进一步查看详情的路径，信息充分可执行。",
-          "tone": "语气礼貌自然，符合中性咨询场景。",
-          "grounding": "claims中材质断言状态为unverified且无业务证据支持，按规则赋null。"
+          "relevance": "用户询问手机壳是硅胶还是塑料，回复给出了TPU软胶材质这一具体答案，覆盖了核心诉求，但未明确说明TPU与用户提到的硅胶、塑料之间的关系，存在轻微缺口。",
+          "usefulness": "提供了具体材质信息并给出查看商品详情页或联系客服的自助路径，具有可执行性，但若能简要解释TPU的特性归属会更有帮助。",
+          "tone": "语气礼貌专业，表达简洁清晰，无不当之处。",
+          "grounding": "关于材质的断言已被标记为unverified且未提供业务证据，无法核实真伪，依据规则应判为null。"
         },
-        "issues": [],
+        "issues": [
+          {
+            "tag": "missing_clarification",
+            "origin": "reply",
+            "quote": "这款手机壳采用的是TPU软胶材质",
+            "reason": "用户明确在硅胶和塑料之间做选择，回复仅说TPU软胶，未解释TPU属于哪一类或与传统硅胶、硬塑料的区别，可能导致用户仍然困惑。",
+            "suggestion": "在告知TPU材质后，简要说明其更接近软胶/硅胶的手感还是偏硬质塑料，帮助用户理解。"
+          }
+        ],
         "additional_claims": [
           {
-            "quote": "这款手机壳采用的是TPU软胶材质，具有较好的防摔性能和手感",
-            "reason": "需要对应商品的规格参数表或产品说明作为业务证据"
+            "quote": "具有较好的防摔性能和手感",
+            "reason": "这是对商品性能的正面事实断言，需要商品参数或测试报告等业务证据支持，不能凭常识认定。"
           }
         ]
       },
       "fusion_actions": [],
-      "issue_tags": [],
+      "issue_tags": [
+        "missing_clarification"
+      ],
       "risk_quotes": [],
       "quality_status": "可接受（暂定）",
-      "review_flags": [],
       "semantic_mode": "llm",
       "reference": {
         "id": "case_08",
@@ -1139,16 +1144,16 @@
       "auto_reply": "退货运费承担规则如下：质量问题导致的退货，运费由商家承担；非质量问题（如不喜欢、买错了等）的退货，运费由买家承担。具体判定标准请参考我们的退换货政策。如有疑问请联系客服。",
       "intent": "退货运费",
       "scores": {
-        "relevance": 4,
-        "usefulness": 3,
-        "tone": 4,
+        "relevance": 3,
+        "usefulness": 2,
+        "tone": 3,
         "grounding": null
       },
-      "total_score": 88.3,
+      "total_score": 63.3,
       "provisional": true,
       "assessed_weight": 75,
       "score_capped": false,
-      "service_gap": false,
+      "service_gap": true,
       "grounding_state": "待核实",
       "claims": [
         {
@@ -1168,19 +1173,12 @@
           "status": "unverified",
           "source": null,
           "rationale": "未提供与此断言对应的业务证据；不能据此认定内容错误。"
-        },
-        {
-          "quote": "具体判定标准请参考我们的退换货政策",
-          "types": [
-            "语义补充"
-          ],
-          "status": "unverified",
-          "source": null,
-          "rationale": "需要对应退换货政策文档链接或内容以核实指引是否准确"
         }
       ],
       "findings": [],
       "suggestions": [
+        "在说明通用规则后，主动询问用户本次退货的具体原因或订单信息，以便给出明确答复。",
+        "在通用规则基础上增加引导性提问，帮助用户定位自身情况。",
         "将待核实断言关联到真实政策、商品参数或工具记录；核实前避免作确定性承诺。"
       ],
       "rule_coverage": "covered",
@@ -1191,37 +1189,43 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "询问退货邮费由谁承担的一般规则",
-          "emotion_trigger": "",
-          "next_step": "ready",
-          "uncertainty": "未确认用户具体订单情况，但作为一般政策问答已给出条件分支"
-        },
         "scores": {
-          "relevance": 4,
-          "usefulness": 3,
-          "tone": 4,
+          "relevance": 3,
+          "usefulness": 2,
+          "tone": 3,
           "grounding": null
         },
         "rationales": {
-          "relevance": "直接回答了退货运费承担问题，按质量/非质量问题分类说明，切题且内部一致。",
-          "usefulness": "给出了清晰的条件分支规则，用户可据此判断；但未主动询问用户具体退货原因以进一步协助，略缺个性化推进。",
-          "tone": "中性咨询下语气自然、礼貌，无不当表述。",
-          "grounding": "claims中两条政策断言均为unverified，无显式业务证据支持也无矛盾，记为null。"
+          "relevance": "回复直接回应了用户关于退货运费承担方的问题，给出了质量与非质量问题两种场景的规则，但未确认用户具体属于哪种退货情形。",
+          "usefulness": "提供了通用规则框架，但缺少针对用户当前订单的具体判断或引导步骤，也未主动询问退货原因以便给出明确结论，用户仍需自行对照或再次联系客服。",
+          "tone": "语气客观礼貌，表达清晰简洁，无不当用语，但缺乏对用户可能面临退货困扰的共情。",
+          "grounding": "两条政策类断言均被标记为unverified，未提供业务证据支持，但也无法认定错误，按规则应判为null。"
         },
-        "issues": [],
-        "additional_claims": [
+        "issues": [
           {
-            "quote": "具体判定标准请参考我们的退换货政策",
-            "reason": "需要对应退换货政策文档链接或内容以核实指引是否准确"
+            "tag": "missing_clarification",
+            "origin": "question",
+            "quote": "退货邮费谁出",
+            "reason": "用户未说明退货原因，客服未追问是质量问题还是非质量问题，导致只能给出通用规则而无法给出针对性结论。",
+            "suggestion": "在说明通用规则后，主动询问用户本次退货的具体原因或订单信息，以便给出明确答复。"
+          },
+          {
+            "tag": "generic_answer",
+            "origin": "reply",
+            "quote": "退货运费承担规则如下：质量问题导致的退货，运费由商家承担；非质量问题（如不喜欢、买错了等）的退货，运费由买家承担。",
+            "reason": "仅给出通用政策说明，未结合用户实际退货场景进行判断或引导。",
+            "suggestion": "在通用规则基础上增加引导性提问，帮助用户定位自身情况。"
           }
-        ]
+        ],
+        "additional_claims": []
       },
       "fusion_actions": [],
-      "issue_tags": [],
+      "issue_tags": [
+        "generic_answer",
+        "missing_clarification"
+      ],
       "risk_quotes": [],
-      "quality_status": "可接受（暂定）",
-      "review_flags": [],
+      "quality_status": "需要改进",
       "semantic_mode": "llm",
       "reference": {
         "id": "case_09",
@@ -1258,11 +1262,11 @@
       "intent": "取消订单",
       "scores": {
         "relevance": 4,
-        "usefulness": 4,
+        "usefulness": 3,
         "tone": 4,
         "grounding": null
       },
-      "total_score": 100.0,
+      "total_score": 88.3,
       "provisional": true,
       "assessed_weight": 75,
       "score_capped": false,
@@ -1277,10 +1281,20 @@
           "status": "unverified",
           "source": null,
           "rationale": "未提供与此断言对应的业务证据；不能据此认定内容错误。"
+        },
+        {
+          "quote": "订单未发货前可以申请取消",
+          "types": [
+            "语义补充"
+          ],
+          "status": "unverified",
+          "source": null,
+          "rationale": "属于平台取消政策的事实断言，需要对应业务规则证据支持。"
         }
       ],
       "findings": [],
       "suggestions": [
+        "补充具体操作路径，例如'进入订单详情页后点击【取消订单】按钮'。",
         "将待核实断言关联到真实政策、商品参数或工具记录；核实前避免作确定性承诺。"
       ],
       "rule_coverage": "covered",
@@ -1291,37 +1305,40 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "询问未发货订单能否取消及如何操作",
-          "emotion_trigger": "",
-          "next_step": "ready",
-          "uncertainty": "未确认具体平台/订单号，但一般政策问答无需先收订单号"
-        },
         "scores": {
           "relevance": 4,
-          "usefulness": 4,
+          "usefulness": 3,
           "tone": 4,
           "grounding": null
         },
         "rationales": {
-          "relevance": "直接回答未发货可取消，并给出操作路径和退款时效，完全切题。",
-          "usefulness": "提供了自助入口（订单详情页）和人工协助两条路径，信息充分可执行。",
-          "tone": "中性咨询场景下语气自然礼貌，无问题。",
-          "grounding": "claims中退款时效为unverified且无业务证据支持，按规则记null。"
+          "relevance": "直接回应了用户关于未发货订单能否取消的诉求，明确告知可以取消并提供了操作路径和退款时效。",
+          "usefulness": "给出了在订单详情页操作或联系客服两条路径，但未提供具体操作步骤（如点击哪个按钮），属于轻微缺口。",
+          "tone": "礼貌简洁，直接解答疑问，无冗余表达。",
+          "grounding": "回复中包含'订单未发货前可以申请取消'及'1-3个工作日退回'等政策断言，但当前未提供任何业务证据支持，无法核实真伪，按规则应设为null。"
         },
-        "issues": [],
+        "issues": [
+          {
+            "tag": "generic_answer",
+            "origin": "reply",
+            "quote": "请您在订单详情页操作，或联系客服协助处理。",
+            "reason": "未说明订单详情页中具体的取消操作入口或步骤，指引偏通用。",
+            "suggestion": "补充具体操作路径，例如'进入订单详情页后点击【取消订单】按钮'。"
+          }
+        ],
         "additional_claims": [
           {
-            "quote": "取消后款项会在1-3个工作日退回原支付方式",
-            "reason": "需要平台退款政策或时效规定的业务证据来核实"
+            "quote": "订单未发货前可以申请取消",
+            "reason": "属于平台取消政策的事实断言，需要对应业务规则证据支持。"
           }
         ]
       },
       "fusion_actions": [],
-      "issue_tags": [],
+      "issue_tags": [
+        "generic_answer"
+      ],
       "risk_quotes": [],
       "quality_status": "可接受（暂定）",
-      "review_flags": [],
       "semantic_mode": "llm",
       "reference": {
         "id": "case_10",
@@ -1359,7 +1376,7 @@
       "scores": {
         "relevance": 2,
         "usefulness": 2,
-        "tone": 4,
+        "tone": 3,
         "grounding": null
       },
       "total_score": 49,
@@ -1385,7 +1402,7 @@
           ],
           "status": "unverified",
           "source": null,
-          "rationale": "需要业务证据证明该店铺/平台的换货流程是否为退货重拍模式"
+          "rationale": "涉及平台或商家具体售后流程规则，需要业务证据支持"
         },
         {
           "quote": "请分别发起两件商品的换货申请，按照退货地址寄回原商品，我们收到后会发出新尺码的商品",
@@ -1394,7 +1411,7 @@
           ],
           "status": "unverified",
           "source": null,
-          "rationale": "需要业务证据证明是否存在直接换货申请流程及其具体操作步骤"
+          "rationale": "涉及换货操作流程与发货规则，需要业务证据支持，且与前句退货重拍流程矛盾"
         }
       ],
       "findings": [
@@ -1418,8 +1435,9 @@
         }
       ],
       "suggestions": [
-        "询问用户订单号以及每件衣服分别需要换成什么尺码。",
-        "根据实际业务规则明确告知是走换货申请还是退货重拍，不要同时给出矛盾流程。",
+        "应根据实际业务规则只提供一种明确的换货或退货重拍流程，并说明适用条件",
+        "先询问两件衣服的订单编号以及各自需要更换的目标尺码，再提供对应操作指引",
+        "在开头增加简短的共情表达，如'很抱歉尺码不合适给您带来不便'",
         "明确选择退货重购或换货其中一种流程，并核实政策。",
         "在授权流程内收集最少必要的订单/商品信息，再查询；无查询能力时说明限制并给出明确入口。",
         "将待核实断言关联到真实政策、商品参数或工具记录；核实前避免作确定性承诺。"
@@ -1432,50 +1450,49 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "用户购买两件衣服尺码不合适，请求换货",
-          "emotion_trigger": "",
-          "next_step": "minor_gap",
-          "uncertainty": "未确认具体平台/店铺的换货流程（直接换货还是退货重拍），未确认订单号及目标尺码"
-        },
         "scores": {
-          "relevance": 3,
+          "relevance": 2,
           "usefulness": 2,
-          "tone": 4,
+          "tone": 3,
           "grounding": null
         },
         "rationales": {
-          "relevance": "主题正确回应了换货诉求，但回复内部存在矛盾：先说'退货再重新下单'，后又说'发起换货申请…收到后发出新尺码'，混淆了两种不同流程。",
-          "usefulness": "未核实具体订单和目标尺码，且给出的操作指引自相矛盾（退货重拍 vs 换货申请），用户无法确定实际应执行哪条路径。",
-          "tone": "中性咨询下礼貌自然，无问题。",
-          "grounding": "claims 中运费政策为 unverified，无显式业务证据支持或反驳，按规则记 null。"
+          "relevance": "用户诉求为两件衣服分别换尺码，回复覆盖了换货主题，但存在明显内部矛盾：先说'需要先退货再重新下单选择正确尺码'，后又说'分别发起两件商品的换货申请……我们收到后会发出新尺码的商品'，两种流程互相冲突，未准确回应用户具体场景。",
+          "usefulness": "给出了操作步骤，但流程自相矛盾（退货重拍 vs 换货申请），用户无法判断应执行哪条路径；同时未追问两件衣服各自的订单号及需要更换的目标尺码，缺少必要信息收集。",
+          "tone": "语气礼貌、简洁，但缺乏对用户遇到尺码不合适情况的共情表达。",
+          "grounding": "无业务证据提供，无法核实任何事实断言，且 claims 中已识别到未证实的政策声明。"
         },
         "issues": [
           {
-            "tag": "missing_clarification",
-            "severity": "major",
-            "origin": "question",
-            "quote": "买了两件衣服一件大了一件小了想换尺码",
-            "reason": "未确认订单号、具体哪件需换大/换小及目标尺码，无法推进实际换货操作。",
-            "suggestion": "询问用户订单号以及每件衣服分别需要换成什么尺码。"
-          },
-          {
             "tag": "generic_answer",
-            "severity": "minor",
             "origin": "reply",
             "quote": "换货需要先退货再重新下单选择正确尺码。请分别发起两件商品的换货申请，按照退货地址寄回原商品，我们收到后会发出新尺码的商品。",
-            "reason": "将'退货重拍'和'换货申请'两种不同流程混在一起作为通用说明输出，未针对用户具体订单定位正确路径。",
-            "suggestion": "根据实际业务规则明确告知是走换货申请还是退货重拍，不要同时给出矛盾流程。"
+            "reason": "同时给出退货重拍和换货申请两种矛盾流程，属于通用模板拼接，未针对用户具体情况给出明确可执行方案",
+            "suggestion": "应根据实际业务规则只提供一种明确的换货或退货重拍流程，并说明适用条件"
+          },
+          {
+            "tag": "missing_clarification",
+            "origin": "question",
+            "quote": "买了两件衣服一件大了一件小了想换尺码",
+            "reason": "用户未提供订单信息及目标尺码，客服未追问即直接给出操作指引，可能导致用户操作错误",
+            "suggestion": "先询问两件衣服的订单编号以及各自需要更换的目标尺码，再提供对应操作指引"
+          },
+          {
+            "tag": "insufficient_empathy",
+            "origin": "reply",
+            "quote": "您好，换货需要先退货再重新下单选择正确尺码。",
+            "reason": "用户因尺码不合需要换货，回复直接进入流程说明，未对不便表示理解或歉意",
+            "suggestion": "在开头增加简短的共情表达，如'很抱歉尺码不合适给您带来不便'"
           }
         ],
         "additional_claims": [
           {
             "quote": "换货需要先退货再重新下单选择正确尺码",
-            "reason": "需要业务证据证明该店铺/平台的换货流程是否为退货重拍模式"
+            "reason": "涉及平台或商家具体售后流程规则，需要业务证据支持"
           },
           {
             "quote": "请分别发起两件商品的换货申请，按照退货地址寄回原商品，我们收到后会发出新尺码的商品",
-            "reason": "需要业务证据证明是否存在直接换货申请流程及其具体操作步骤"
+            "reason": "涉及换货操作流程与发货规则，需要业务证据支持，且与前句退货重拍流程矛盾"
           }
         ]
       },
@@ -1484,13 +1501,11 @@
       ],
       "issue_tags": [
         "generic_answer",
+        "insufficient_empathy",
         "missing_clarification"
       ],
       "risk_quotes": [],
       "quality_status": "高风险待复核",
-      "review_flags": [
-        "下一步被标为轻微缺口，但有效性已判明显缺口，需要复核严重程度。"
-      ],
       "semantic_mode": "llm",
       "reference": {
         "id": "case_11",
@@ -1532,10 +1547,10 @@
       "scores": {
         "relevance": 3,
         "usefulness": 2,
-        "tone": 4,
+        "tone": 3,
         "grounding": null
       },
-      "total_score": 68.3,
+      "total_score": 63.3,
       "provisional": true,
       "assessed_weight": 75,
       "score_capped": false,
@@ -1573,9 +1588,9 @@
         }
       ],
       "suggestions": [
-        "应主动询问用户的订单号或快递单号，以便查询具体物流节点。",
-        "在回复中请用户提供订单号或快递单号，以便进一步查询。",
-        "在获取单号后主动帮用户查询或发起物流催件，而非仅建议等待和自助联系。",
+        "应先询问用户的订单编号或快递单号，以便查询具体物流状态并提供针对性帮助。",
+        "在列举原因后应引导用户提供订单信息以便进一步核实。",
+        "先表达对用户等待的理解与歉意，再说明后续处理方案。",
         "在授权流程内收集最少必要的订单/商品信息，再查询；无查询能力时说明限制并给出明确入口。",
         "先核查物流节点与承运商承诺时效，再决定是否等待或催办。",
         "将待核实断言关联到真实政策、商品参数或工具记录；核实前避免作确定性承诺。"
@@ -1588,48 +1603,39 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "用户反馈快递物流两天未更新，需要查询具体包裹状态或获得处理协助",
-          "emotion_trigger": "",
-          "next_step": "minor_gap",
-          "uncertainty": "缺少订单号/运单号，无法确认客服是否具备直接查询物流的工具能力"
-        },
         "scores": {
           "relevance": 3,
           "usefulness": 2,
-          "tone": 4,
+          "tone": 3,
           "grounding": null
         },
         "rationales": {
-          "relevance": "主题正确，回应了物流未更新的问题，但未针对用户的具体包裹进行定位。",
-          "usefulness": "用户已明确两天未更新，回复仅列出通用原因并建议再等1-2天或自行联系快递公司，未主动索要单号以核实具体状态，推动力不足。",
-          "tone": "中性咨询场景，语气礼貌自然，无不当之处。",
-          "grounding": "claims中关于等待时效和跟进方式的断言均标记为unverified，无显式业务证据支持也无矛盾，记为null。"
+          "relevance": "回复识别到用户关于物流停滞的诉求，列举了可能原因并给出后续建议，但未针对'两天没更新'这一具体时长做针对性判断，也未主动询问订单号或快递单号以便核实。",
+          "usefulness": "给出的建议偏通用，要求用户自行联系快递公司或再等1-2天，未主动提出帮用户查询物流状态，自助路径不够具体，缺少必要追问以推进问题解决。",
+          "tone": "语气礼貌平和，但对用户等待两天的焦虑情绪缺乏共情表达，仅用'建议您耐心等待'略显敷衍。",
+          "grounding": "claims 中关于等待时效和联系客服的建议被标记为 unverified，无业务证据支持也无矛盾，按规则应为 null。"
         },
         "issues": [
           {
-            "tag": "generic_answer",
-            "severity": "major",
-            "origin": "reply",
-            "quote": "物流信息长时间未更新可能是以下原因：1.包裹正在中转途中 2.快递公司信息更新延迟 3.包裹可能出现问题。",
-            "reason": "用户反馈的是自己具体的快递两天未更新，回复只给出通用可能性列表，没有尝试个性化定位该包裹的实际状态。",
-            "suggestion": "应主动询问用户的订单号或快递单号，以便查询具体物流节点。"
-          },
-          {
             "tag": "missing_clarification",
-            "severity": "major",
             "origin": "question",
             "quote": "快递两天没更新了",
-            "reason": "用户未提供订单号或运单号，客服也未追问，导致无法进入实际核查流程。",
-            "suggestion": "在回复中请用户提供订单号或快递单号，以便进一步查询。"
+            "reason": "用户反馈物流异常但未提供订单号或快递单号，客服未追问关键信息，无法进行实际核查与跟进。",
+            "suggestion": "应先询问用户的订单编号或快递单号，以便查询具体物流状态并提供针对性帮助。"
           },
           {
-            "tag": "passive_service",
-            "severity": "minor",
+            "tag": "generic_answer",
             "origin": "reply",
-            "quote": "建议您耐心等待1-2天，如果仍未更新，请联系快递公司查询或联系我们的客服协助跟进。",
-            "reason": "用户已经来反馈异常，客服却建议再等1-2天并让用户自行联系快递公司，缺少当前承接行动。",
-            "suggestion": "在获取单号后主动帮用户查询或发起物流催件，而非仅建议等待和自助联系。"
+            "quote": "物流信息长时间未更新可能是以下原因：1.包裹正在中转途中 2.快递公司信息更新延迟 3.包裹可能出现问题。",
+            "reason": "仅罗列通用可能原因，未结合用户'两天'的具体情况进行分析或排查。",
+            "suggestion": "在列举原因后应引导用户提供订单信息以便进一步核实。"
+          },
+          {
+            "tag": "insufficient_empathy",
+            "origin": "reply",
+            "quote": "建议您耐心等待1-2天",
+            "reason": "用户已等待两天且主动来询，直接建议继续等待缺乏对用户焦急情绪的回应。",
+            "suggestion": "先表达对用户等待的理解与歉意，再说明后续处理方案。"
           }
         ],
         "additional_claims": []
@@ -1637,14 +1643,11 @@
       "fusion_actions": [],
       "issue_tags": [
         "generic_answer",
-        "missing_clarification",
-        "passive_service"
+        "insufficient_empathy",
+        "missing_clarification"
       ],
       "risk_quotes": [],
       "quality_status": "需要改进",
-      "review_flags": [
-        "下一步被标为轻微缺口，但有效性已判明显缺口，需要复核严重程度。"
-      ],
       "semantic_mode": "llm",
       "reference": {
         "id": "case_12",
@@ -1704,7 +1707,16 @@
           ],
           "status": "unverified",
           "source": null,
-          "rationale": "需要业务规则或页面结构证据确认该平台所有面膜商品详情页均展示完整成分表。"
+          "rationale": "需要业务证据确认该店铺商品详情页是否确实展示完整成分表。"
+        },
+        {
+          "quote": "可以联系品牌官方客服",
+          "types": [
+            "语义补充"
+          ],
+          "status": "unverified",
+          "source": null,
+          "rationale": "需要业务证据确认是否存在品牌官方客服渠道以及其是否能提供更详细的成分信息。"
         }
       ],
       "findings": [
@@ -1728,8 +1740,9 @@
         }
       ],
       "suggestions": [
-        "询问用户具体购买的面膜名称或提供订单号，以便精准查找成分信息。",
-        "在确认具体商品后，尝试直接提供成分信息或协助对接品牌方，而非仅给出通用指引。",
+        "先询问用户购买的具体面膜款式或订单号，再尝试提供对应成分信息或精确指引。",
+        "在指引自助路径的同时，可表示若能提供具体商品信息将尽力协助查找成分。",
+        "在回复开头增加对用户敏感肌肤担忧的理解与关心。",
         "在授权流程内收集最少必要的订单/商品信息，再查询；无查询能力时说明限制并给出明确入口。",
         "先确认具体商品并提供有来源的完整成分表，不作未经证实的安全保证。"
       ],
@@ -1741,12 +1754,6 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "用户请求获取所购面膜的成分表，因皮肤敏感需要核对",
-          "emotion_trigger": "",
-          "next_step": "minor_gap",
-          "uncertainty": "无法确认客服是否具备直接发送成分表的工具能力；未核实具体是哪款面膜"
-        },
         "scores": {
           "relevance": 3,
           "usefulness": 2,
@@ -1754,46 +1761,53 @@
           "grounding": null
         },
         "rationales": {
-          "relevance": "主题正确，告知了查看成分表的途径，但未针对用户'发给我看看'的直接请求做出明确回应或追问具体商品。",
-          "usefulness": "用户已购买且明确提出发送请求，仅指引去详情页自行查看并建议联系品牌方，未主动协助获取或追问具体订单/商品以提供针对性帮助。",
-          "tone": "礼貌中性，对'皮肤敏感'给出了测试建议，但整体偏模板化。",
-          "grounding": "无显式业务证据可供核实。"
+          "relevance": "回复指出了成分表的查看位置并给出敏感肌建议，基本回应了用户诉求，但未主动提供具体成分信息或确认是哪款面膜。",
+          "usefulness": "指引用户自行去商品详情页查看，未直接发送成分表，也未追问具体商品以便协助查询，对用户的实际帮助有限。",
+          "tone": "语气礼貌，针对皮肤敏感给出了小样测试的建议，但缺少对用户担忧情绪的共情表达。",
+          "grounding": "无业务证据可供核查，无法判断商品详情页是否确实包含完整成分表或品牌官方客服是否可联系。"
         },
         "issues": [
           {
             "tag": "missing_clarification",
-            "severity": "minor",
             "origin": "question",
-            "quote": "我买的面膜",
-            "reason": "未确认用户购买的具体面膜款式或订单信息，导致无法判断是否能直接提供该产品的成分表。",
-            "suggestion": "询问用户具体购买的面膜名称或提供订单号，以便精准查找成分信息。"
+            "quote": "我买的面膜成分表能发给我看看吗",
+            "reason": "用户要求发送成分表但未指明具体商品，客服未追问是哪款面膜，导致无法直接提供针对性信息。",
+            "suggestion": "先询问用户购买的具体面膜款式或订单号，再尝试提供对应成分信息或精确指引。"
           },
           {
             "tag": "passive_service",
-            "severity": "minor",
             "origin": "reply",
-            "quote": "如需更详细的成分信息，可以联系品牌官方客服。",
-            "reason": "用户已提出明确的个性化协助需求（发送成分表），客服将其推回自行查看或转至品牌方，缺少承接行动。",
-            "suggestion": "在确认具体商品后，尝试直接提供成分信息或协助对接品牌方，而非仅给出通用指引。"
+            "quote": "面膜的成分表可以在商品详情页查看",
+            "reason": "用户明确请求'发给我看看'，客服仅告知自行查看路径，未主动尝试提供或进一步协助。",
+            "suggestion": "在指引自助路径的同时，可表示若能提供具体商品信息将尽力协助查找成分。"
+          },
+          {
+            "tag": "insufficient_empathy",
+            "origin": "question",
+            "quote": "我皮肤敏感",
+            "reason": "用户表达了对皮肤敏感的担忧，回复中缺乏对该顾虑的安抚和共情。",
+            "suggestion": "在回复开头增加对用户敏感肌肤担忧的理解与关心。"
           }
         ],
         "additional_claims": [
           {
             "quote": "面膜的成分表可以在商品详情页查看",
-            "reason": "需要业务规则或页面结构证据确认该平台所有面膜商品详情页均展示完整成分表。"
+            "reason": "需要业务证据确认该店铺商品详情页是否确实展示完整成分表。"
+          },
+          {
+            "quote": "可以联系品牌官方客服",
+            "reason": "需要业务证据确认是否存在品牌官方客服渠道以及其是否能提供更详细的成分信息。"
           }
         ]
       },
       "fusion_actions": [],
       "issue_tags": [
+        "insufficient_empathy",
         "missing_clarification",
         "passive_service"
       ],
       "risk_quotes": [],
       "quality_status": "需要改进",
-      "review_flags": [
-        "下一步被标为轻微缺口，但有效性已判明显缺口，需要复核严重程度。"
-      ],
       "semantic_mode": "llm",
       "reference": {
         "id": "case_13",
@@ -1869,6 +1883,7 @@
       ],
       "findings": [],
       "suggestions": [
+        "明确说明客服能提供的具体协助方式，例如'我们可以帮您联系卖家索要实物拍摄视频或图片'。",
         "将待核实断言关联到真实政策、商品参数或工具记录；核实前避免作确定性承诺。"
       ],
       "rule_coverage": "covered",
@@ -1879,12 +1894,6 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "用户提出产品功能建议，希望在下单前能查看实物视频",
-          "emotion_trigger": "",
-          "next_step": "ready",
-          "uncertainty": "客服是否具备将反馈转达给产品团队的实际流程权限；部分商品是否确实支持视频展示"
-        },
         "scores": {
           "relevance": 4,
           "usefulness": 3,
@@ -1892,28 +1901,28 @@
           "grounding": null
         },
         "rationales": {
-          "relevance": "正确识别为功能建议并直接回应，内部一致。",
-          "usefulness": "确认接收建议、说明现有替代方案并提供进一步协助路径，对建议类诉求已较充分，但缺少具体记录方式或后续反馈渠道的说明。",
-          "tone": "礼貌感谢，自然得体，适合建议场景。",
-          "grounding": "claims中均为待核实状态，无显式可信业务证据支持或矛盾。"
+          "relevance": "回复直接回应了用户关于增加下单前实物视频功能的建议，说明了当前现状并提供了替代方案，覆盖完整。",
+          "usefulness": "给出了在商品详情页查看视频标识的自助路径以及联系客服协助的选项，但'联系客服尽力协助'表述较笼统，未说明具体如何协助获取实物视频。",
+          "tone": "开头感谢用户建议，语气尊重友好，对用户反馈给予正面回应。",
+          "grounding": "claims 中两项断言均为 unverified，无业务证据支持也无矛盾，按规则应为 null。"
         },
-        "issues": [],
-        "additional_claims": [
+        "issues": [
           {
-            "quote": "目前部分商品已支持视频展示，您可以在商品详情页查看是否有视频标识",
-            "reason": "需要平台商品详情页实际功能截图或产品文档证实该功能存在"
-          },
-          {
-            "quote": "我们会将您的反馈转达给产品团队",
-            "reason": "需要内部工单系统或反馈流转机制的业务证据证实该承诺可执行"
+            "tag": "generic_answer",
+            "origin": "reply",
+            "quote": "如果您有特定商品需要看实物，可以联系客服，我们会尽力协助。",
+            "reason": "'尽力协助'表述模糊，未说明客服具体能提供什么帮助（如联系卖家拍摄、提供实拍图等），可执行性不足。",
+            "suggestion": "明确说明客服能提供的具体协助方式，例如'我们可以帮您联系卖家索要实物拍摄视频或图片'。"
           }
-        ]
+        ],
+        "additional_claims": []
       },
       "fusion_actions": [],
-      "issue_tags": [],
+      "issue_tags": [
+        "generic_answer"
+      ],
       "risk_quotes": [],
       "quality_status": "可接受（暂定）",
-      "review_flags": [],
       "semantic_mode": "llm",
       "reference": {
         "id": "case_14",
@@ -1995,8 +2004,8 @@
       ],
       "findings": [],
       "suggestions": [
-        "应先询问用户本次需要处理的订单号，或主动查询用户近期订单以定位问题。",
-        "结合订单信息提供具体的退货入口或协助发起售后工单。",
+        "应先询问本次及上次的订单号或商品名称，以及损坏的具体情况或照片，再给出对应解决方案",
+        "在获取订单信息后再指导具体的退货退款操作步骤",
         "将待核实断言关联到真实政策、商品参数或工具记录；核实前避免作确定性承诺。"
       ],
       "rule_coverage": "covered",
@@ -2007,12 +2016,6 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "用户连续两次收到损坏商品，投诉并要求处理",
-          "emotion_trigger": "我上次买的东西收到是坏的这次又是坏的",
-          "next_step": "minor_gap",
-          "uncertainty": "未确认具体订单号、商品类型及当前订单状态"
-        },
         "scores": {
           "relevance": 3,
           "usefulness": 2,
@@ -2020,43 +2023,28 @@
           "grounding": null
         },
         "rationales": {
-          "relevance": "正确识别了用户连续收到坏商品的投诉诉求并给出退货退款方向，但未区分或确认是哪一笔订单需要处理。",
-          "usefulness": "给出了退货退款的通用路径，但未核实具体订单信息，也未询问本次损坏的具体情况，对连续受损的用户仅给通用流程帮助有限。",
-          "tone": "充分承认了用户连续遭遇不良体验的情绪，表达了重视和歉意，语气得体。",
-          "grounding": "所有业务承诺（运费承担、品控反馈、补偿优惠券）均无显式证据支持，但也无矛盾，按规则记为null。"
+          "relevance": "回复识别到用户连续收到坏商品的抱怨并致歉，但未确认具体是哪一笔订单或哪件商品，也未询问损坏情况，覆盖不够精准。",
+          "usefulness": "给出了退货退款、运费承担、反馈品控和补偿优惠券等方案，但缺少必要追问（如订单号、商品名称、损坏照片），且未提供具体操作路径，用户难以直接执行。",
+          "tone": "开头'非常抱歉连续给您带来不好的体验'准确回应了用户两次遇到问题的不满情绪，态度诚恳尊重。",
+          "grounding": "所有涉及政策与承诺的断言均无业务证据支持，无法核实真伪，按规则设为null。"
         },
         "issues": [
           {
             "tag": "missing_clarification",
-            "severity": "major",
             "origin": "question",
             "quote": "我上次买的东西收到是坏的这次又是坏的",
-            "reason": "用户提到两次收到坏商品，客服未确认需要处理的是哪一笔订单或索要订单号，导致无法实际推进退货退款操作。",
-            "suggestion": "应先询问用户本次需要处理的订单号，或主动查询用户近期订单以定位问题。"
+            "reason": "用户提到两次收到坏商品但未指明具体订单或商品，客服未追问导致无法针对性处理",
+            "suggestion": "应先询问本次及上次的订单号或商品名称，以及损坏的具体情况或照片，再给出对应解决方案"
           },
           {
             "tag": "generic_answer",
-            "severity": "minor",
             "origin": "reply",
             "quote": "请您先申请退货退款，退货运费由我们承担",
-            "reason": "在用户明确表达连续受损的情况下，直接给出通用退货流程，未针对具体订单进行个性化核查。",
-            "suggestion": "结合订单信息提供具体的退货入口或协助发起售后工单。"
+            "reason": "在未确认具体订单的情况下直接给出通用退货流程，缺乏针对性",
+            "suggestion": "在获取订单信息后再指导具体的退货退款操作步骤"
           }
         ],
-        "additional_claims": [
-          {
-            "quote": "退货运费由我们承担",
-            "reason": "需要平台或店铺的退货运费承担政策作为业务证据"
-          },
-          {
-            "quote": "同时我们会将您的情况反馈给品控部门，加强对该类商品的质量检查",
-            "reason": "需要内部品控反馈机制的实际流程或权限说明"
-          },
-          {
-            "quote": "如有需要，可以申请额外的补偿优惠券",
-            "reason": "需要补偿优惠券的发放条件、额度及审批权限的业务依据"
-          }
-        ]
+        "additional_claims": []
       },
       "fusion_actions": [],
       "issue_tags": [
@@ -2068,9 +2056,6 @@
         "如有需要，可以申请额外的补偿优惠券"
       ],
       "quality_status": "高风险待复核",
-      "review_flags": [
-        "下一步被标为轻微缺口，但有效性已判明显缺口，需要复核严重程度。"
-      ],
       "semantic_mode": "llm",
       "reference": {
         "id": "case_15",
@@ -2114,21 +2099,23 @@
       "auto_reply": "您好，不同手机各有优势，适合的需求也不同。如果您能告诉我具体的使用场景和预算，我可以帮您推荐更合适的选择。您也可以查看商品详情页的用户评价和参数对比来做决策。",
       "intent": "商品对比",
       "scores": {
-        "relevance": 4,
-        "usefulness": 3,
-        "tone": 4,
+        "relevance": 2,
+        "usefulness": 2,
+        "tone": 3,
         "grounding": null
       },
-      "total_score": 88.3,
+      "total_score": 55.0,
       "provisional": true,
       "assessed_weight": 75,
       "score_capped": false,
-      "service_gap": false,
+      "service_gap": true,
       "grounding_state": "未检出可核查断言",
       "claims": [],
       "findings": [],
       "suggestions": [
-        "先请用户提供或确认两款手机的具体名称/型号，再结合场景和预算进行对比。"
+        "可先请用户告知首页推荐的两款手机名称或型号，再基于参数或评价进行对比分析。",
+        "在确认具体机型后，针对用户关心的维度（如性能、拍照、续航等）进行对比说明。",
+        "保留当前表达，并在真实业务场景核实工具能力及事实来源。"
       ],
       "rule_coverage": "covered",
       "baseline_scores": {
@@ -2138,43 +2125,43 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "比较首页推荐的两款手机并给出购买建议",
-          "emotion_trigger": "",
-          "next_step": "minor_gap",
-          "uncertainty": "客服无法确认用户所指的'首页推荐的那两款手机'具体是哪两款，缺少对象信息"
-        },
         "scores": {
-          "relevance": 4,
-          "usefulness": 3,
-          "tone": 4,
+          "relevance": 2,
+          "usefulness": 2,
+          "tone": 3,
           "grounding": null
         },
         "rationales": {
-          "relevance": "正确理解用户想比较两款手机的诉求，因对象不明而追问使用场景和预算，方向一致。",
-          "usefulness": "在无法确认具体机型时，询问使用场景和预算是有效推进方式，同时提供自助对比路径；若能主动引导用户说出型号会更高效。",
-          "tone": "中性咨询下语气自然礼貌，无问题。",
-          "grounding": "claims为空，回复中无需要业务证据支持的事实断言。"
+          "relevance": "用户明确询问首页推荐的两款手机哪个更好，回复未针对这两款具体机型进行对比或确认，仅给出通用选购建议，未覆盖必要事项。",
+          "usefulness": "在无法直接获取首页信息的情况下，要求用户提供使用场景和预算有一定合理性，但未主动引导用户说明是哪两款手机以便进一步协助，也未提供查看首页推荐的具体路径，自助建议偏泛化。",
+          "tone": "语气礼貌平和，但面对用户具体的比较需求显得较为模板化，缺少针对性回应。",
+          "grounding": "回复中无事实断言，且未提供任何业务证据支持，无法核查，按规则设为null。"
         },
         "issues": [
           {
             "tag": "missing_clarification",
-            "severity": "minor",
+            "origin": "question",
+            "quote": "你们首页推荐的那两款手机",
+            "reason": "用户提到首页推荐的两款手机但未指明型号，客服未追问具体是哪两款，导致无法提供针对性对比，影响问题解决。",
+            "suggestion": "可先请用户告知首页推荐的两款手机名称或型号，再基于参数或评价进行对比分析。"
+          },
+          {
+            "tag": "generic_answer",
             "origin": "reply",
-            "quote": "如果您能告诉我具体的使用场景和预算",
-            "reason": "未先确认用户所指'首页推荐的那两款手机'的具体型号，直接跳到场景和预算，可能导致后续推荐偏离用户实际想比较的对象。",
-            "suggestion": "先请用户提供或确认两款手机的具体名称/型号，再结合场景和预算进行对比。"
+            "quote": "不同手机各有优势，适合的需求也不同。如果您能告诉我具体的使用场景和预算，我可以帮您推荐更合适的选择。",
+            "reason": "回复为通用选购话术，未回应用户对特定两款手机的比较诉求。",
+            "suggestion": "在确认具体机型后，针对用户关心的维度（如性能、拍照、续航等）进行对比说明。"
           }
         ],
         "additional_claims": []
       },
       "fusion_actions": [],
       "issue_tags": [
+        "generic_answer",
         "missing_clarification"
       ],
       "risk_quotes": [],
-      "quality_status": "可接受（暂定）",
-      "review_flags": [],
+      "quality_status": "需要改进",
       "semantic_mode": "llm",
       "reference": {
         "id": "case_16",
@@ -2214,21 +2201,23 @@
       "auto_reply": "您好，关于您的两个问题：1.退货进度请在订单详情页查看 2.快递进度可以在物流追踪页面查看。如果您能提供具体的订单号，我可以帮您查询更详细的信息。",
       "intent": "多事项进度",
       "scores": {
-        "relevance": 4,
-        "usefulness": 3,
-        "tone": 4,
+        "relevance": 3,
+        "usefulness": 2,
+        "tone": 3,
         "grounding": null
       },
-      "total_score": 88.3,
+      "total_score": 63.3,
       "provisional": true,
       "assessed_weight": 75,
       "score_capped": false,
-      "service_gap": false,
+      "service_gap": true,
       "grounding_state": "未检出可核查断言",
       "claims": [],
       "findings": [],
       "suggestions": [
-        "回复中已合理追问订单号，可补充询问快递运单号以覆盖第二个诉求。"
+        "在索要订单号的同时，询问用户所查快递是否为退货寄出的包裹，以便一次性解决。",
+        "补充简要的操作步骤，如'进入我的订单-点击对应订单-查看退货/物流详情'。",
+        "保留当前表达，并在真实业务场景核实工具能力及事实来源。"
       ],
       "rule_coverage": "covered",
       "baseline_scores": {
@@ -2238,43 +2227,43 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "用户请求查询退货进度及快递物流状态",
-          "emotion_trigger": "",
-          "next_step": "minor_gap",
-          "uncertainty": "缺少订单号/运单号，无法确认客服是否具备代查系统权限"
-        },
         "scores": {
-          "relevance": 4,
-          "usefulness": 3,
-          "tone": 4,
+          "relevance": 3,
+          "usefulness": 2,
+          "tone": 3,
           "grounding": null
         },
         "rationales": {
-          "relevance": "正确识别了退货和快递两个诉求并分别回应，内部一致。",
-          "usefulness": "给出了自助查看路径，同时主动索要订单号以便进一步协助，已有有效推进路径，仅缺具体对象信息。",
-          "tone": "中性咨询场景下语气礼貌自然，无不当之处。",
-          "grounding": "未涉及需要业务证据支持的事实断言。"
+          "relevance": "回复识别了用户关于退货和快递进度的两个诉求，并请求订单号以便进一步查询，但将两者作为独立问题处理，未主动确认快递是否就是退货包裹。",
+          "usefulness": "提供了自助查看路径（订单详情页、物流追踪页面），并在信息不足时主动索要订单号，方向正确；但未说明具体操作入口或步骤，且未澄清两个诉求之间的关联，执行性一般。",
+          "tone": "语气礼貌、结构清晰，但对用户同时关注两件事的急切感回应较平淡，缺少共情表达。",
+          "grounding": "回复中未包含可核查的事实断言，仅给出通用指引和条件性承诺，无业务证据可供核验。"
         },
         "issues": [
           {
             "tag": "missing_clarification",
-            "severity": "minor",
             "origin": "question",
             "quote": "我那个退货的事顺便看看快递到没到",
-            "reason": "用户未提供订单号或运单号，客服无法直接定位具体退货和快递记录。",
-            "suggestion": "回复中已合理追问订单号，可补充询问快递运单号以覆盖第二个诉求。"
+            "reason": "用户可能在询问退货包裹的物流状态，客服将其拆分为两个独立问题处理，未确认快递是否与退货相关，可能导致重复查询或遗漏。",
+            "suggestion": "在索要订单号的同时，询问用户所查快递是否为退货寄出的包裹，以便一次性解决。"
+          },
+          {
+            "tag": "generic_answer",
+            "origin": "reply",
+            "quote": "1.退货进度请在订单详情页查看 2.快递进度可以在物流追踪页面查看",
+            "reason": "仅给出通用页面名称，未提供具体操作步骤或路径说明，针对性不足。",
+            "suggestion": "补充简要的操作步骤，如'进入我的订单-点击对应订单-查看退货/物流详情'。"
           }
         ],
         "additional_claims": []
       },
       "fusion_actions": [],
       "issue_tags": [
+        "generic_answer",
         "missing_clarification"
       ],
       "risk_quotes": [],
-      "quality_status": "可接受（暂定）",
-      "review_flags": [],
+      "quality_status": "需要改进",
       "semantic_mode": "llm",
       "reference": {
         "id": "case_17",
@@ -2353,13 +2342,13 @@
           ],
           "status": "unverified",
           "source": null,
-          "rationale": "需要业务规则证据确认两周不工作是否自动归类为质量问题而非需排查的使用问题"
+          "rationale": "这是对故障原因的定性判断，未经检测或核实即断言为质量问题，需要业务证据或检测流程支持。"
         }
       ],
       "findings": [],
       "suggestions": [
-        "先询问订单号或购买账号以核实订单状态和质保资格",
-        "在核实订单后提供具体退货地址或发送退货链接",
+        "先请用户提供订单号或购买凭证，核实后再告知适用的售后政策。",
+        "在回复中附上具体退货地址，或引导用户通过系统自助获取退货地址标签。",
         "将待核实断言关联到真实政策、商品参数或工具记录；核实前避免作确定性承诺。"
       ],
       "rule_coverage": "covered",
@@ -2370,12 +2359,6 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "用户报告扫地机器人使用两周后故障，寻求售后处理",
-          "emotion_trigger": "",
-          "next_step": "blocked",
-          "uncertainty": "未核实具体订单、产品型号及故障表现；未提供退货地址"
-        },
         "scores": {
           "relevance": 3,
           "usefulness": 2,
@@ -2383,41 +2366,31 @@
           "grounding": null
         },
         "rationales": {
-          "relevance": "主题正确，回应了产品故障问题，但未追问具体订单或故障细节即直接给出方案。",
-          "usefulness": "未核实订单信息且未提供退货地址，用户无法实际执行寄回操作，核心流程受阻。",
-          "tone": "有基本致歉，语气礼貌，但对连续受损场景的回应略显模板化。",
-          "grounding": "claims中政策断言均为unverified，无已支持或已矛盾的业务证据。"
+          "relevance": "回复识别到用户反馈扫地机器人故障的诉求，并给出处理方向，但未确认具体订单或商品型号，且直接定性为质量问题略显武断。",
+          "usefulness": "提供了退货退款或换新的选项及运费承担说明，但要求'按照退货地址寄回'却未在回复中提供具体地址，也未引导用户提供订单信息以便核实和推进流程，执行性不足。",
+          "tone": "开头表达了歉意，语气礼貌，但对用户使用两周即故障的体验共情稍显不足，整体偏模板化。",
+          "grounding": "回复中包含多项政策与时效类事实断言（30天质保期、退换选项、运费承担），均无业务证据支持，无法核实真伪，按规则应判为null。"
         },
         "issues": [
           {
             "tag": "missing_clarification",
-            "severity": "major",
             "origin": "question",
             "quote": "那个扫地机器人用了两周就不工作了",
-            "reason": "未确认具体订单号和产品型号，无法定位对象并执行后续退换货流程",
-            "suggestion": "先询问订单号或购买账号以核实订单状态和质保资格"
+            "reason": "用户未提供订单号或具体商品信息，客服未追问即直接给出处理方案，可能导致方案与实际订单不匹配。",
+            "suggestion": "先请用户提供订单号或购买凭证，核实后再告知适用的售后政策。"
           },
           {
             "tag": "generic_answer",
-            "severity": "minor",
             "origin": "reply",
             "quote": "请按照退货地址寄回商品",
-            "reason": "未提供具体退货地址，仅给出通用指引，用户无法实际操作",
-            "suggestion": "在核实订单后提供具体退货地址或发送退货链接"
+            "reason": "未提供具体退货地址，也未说明如何获取该地址，属于通用话术，缺乏针对性。",
+            "suggestion": "在回复中附上具体退货地址，或引导用户通过系统自助获取退货地址标签。"
           }
         ],
         "additional_claims": [
           {
             "quote": "扫地机器人使用两周就出现故障，属于质量问题",
-            "reason": "需要业务规则证据确认两周不工作是否自动归类为质量问题而非需排查的使用问题"
-          },
-          {
-            "quote": "您的订单在30天质保期内，可以选择退货退款或者换新",
-            "reason": "需要该订单对应的质保政策及可选售后方案的业务证据"
-          },
-          {
-            "quote": "退货运费由我们承担",
-            "reason": "需要运费承担政策的业务证据"
+            "reason": "这是对故障原因的定性判断，未经检测或核实即断言为质量问题，需要业务证据或检测流程支持。"
           }
         ]
       },
@@ -2431,7 +2404,6 @@
         "请按照退货地址寄回商品，退货运费由我们承担"
       ],
       "quality_status": "高风险待复核",
-      "review_flags": [],
       "semantic_mode": "llm",
       "reference": {
         "id": "case_18",
@@ -2473,10 +2445,10 @@
       "scores": {
         "relevance": 3,
         "usefulness": 2,
-        "tone": 4,
+        "tone": 3,
         "grounding": null
       },
-      "total_score": 68.3,
+      "total_score": 63.3,
       "provisional": true,
       "assessed_weight": 75,
       "score_capped": false,
@@ -2491,6 +2463,15 @@
           "status": "unverified",
           "source": null,
           "rationale": "未提供与此断言对应的业务证据；不能据此认定内容错误。"
+        },
+        {
+          "quote": "商品补货时间不固定",
+          "types": [
+            "语义补充"
+          ],
+          "status": "unverified",
+          "source": null,
+          "rationale": "这是对平台补货机制的事实性描述，需要业务规则或政策证据支持。"
         }
       ],
       "findings": [
@@ -2505,8 +2486,9 @@
         }
       ],
       "suggestions": [
-        "应主动询问用户想购买的具体是哪款包（如商品名称、链接或截图），以便尝试查询补货计划或提供更精准的帮助。",
-        "在获取具体商品信息后，应尝试查询该商品的实际补货状态或明确告知无法查询的原因。",
+        "应主动询问用户所指的具体商品名称、链接或订单信息，以便查询补货状态。",
+        "应在确认具体商品后直接告知补货进度或登记需求，而非给出通用建议。",
+        "可先表达理解用户期待的心情，如'很抱歉让您久等了'，再提供解决方案。",
         "在授权流程内收集最少必要的订单/商品信息，再查询；无查询能力时说明限制并给出明确入口。",
         "将待核实断言关联到真实政策、商品参数或工具记录；核实前避免作确定性承诺。"
       ],
@@ -2518,59 +2500,56 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "查询特定商品的补货时间",
-          "emotion_trigger": "",
-          "next_step": "minor_gap",
-          "uncertainty": "用户未提供具体商品名称/链接，客服无法直接查询；同时不确定客服是否具备代查库存的能力"
-        },
         "scores": {
           "relevance": 3,
           "usefulness": 2,
-          "tone": 4,
+          "tone": 3,
           "grounding": null
         },
         "rationales": {
-          "relevance": "主题正确，回应了补货问题，但未针对用户'我要买的那个包'这一具体对象进行追问或定位。",
-          "usefulness": "用户询问具体商品状态，回复仅给出通用建议和自助方法，未核实具体商品信息，也未主动询问是哪款包以便进一步协助。",
-          "tone": "中性咨询下语气礼貌自然，无问题。",
-          "grounding": "claims中关于加购提醒功能的断言为unverified，无显式业务证据支持或矛盾，记为null。"
+          "relevance": "回复围绕补货问题展开，但未确认用户具体要买的是哪个包，缺少针对性。",
+          "usefulness": "提供了关注页面、联系客服、加入购物车提醒和查看替代商品等建议，但'联系客服询问预计到货时间'在当前对话中即为客服场景，指引冗余；未主动追问具体商品信息以提供实际帮助。",
+          "tone": "语气礼貌平和，但缺乏对用户等待补货心情的共情表达。",
+          "grounding": "claims 中已标注平台功能断言为 unverified，无业务证据支持，无法判定真伪，故为 null。"
         },
         "issues": [
           {
             "tag": "missing_clarification",
-            "severity": "major",
             "origin": "question",
-            "quote": "我要买的那个包什么时候补货",
-            "reason": "用户指代了特定商品（'那个包'）但未提供具体信息，客服未追问商品名称、链接或订单上下文，导致无法推进具体查询。",
-            "suggestion": "应主动询问用户想购买的具体是哪款包（如商品名称、链接或截图），以便尝试查询补货计划或提供更精准的帮助。"
+            "quote": "我要买的那个包",
+            "reason": "用户未说明具体是哪款包，客服也未追问商品名称或链接，导致无法提供针对性的补货信息。",
+            "suggestion": "应主动询问用户所指的具体商品名称、链接或订单信息，以便查询补货状态。"
           },
           {
             "tag": "generic_answer",
-            "severity": "minor",
             "origin": "reply",
-            "quote": "商品补货时间不固定，建议您关注商品页面或联系客服询问预计到货时间",
-            "reason": "用户询问的是具体对象的状态，回复主要列出通用规则和多种可能性，未做个性化定位。",
-            "suggestion": "在获取具体商品信息后，应尝试查询该商品的实际补货状态或明确告知无法查询的原因。"
+            "quote": "建议您关注商品页面或联系客服询问预计到货时间",
+            "reason": "当前对话本身即为客服渠道，建议用户再联系客服属于无效指引，且整体回复为通用话术，未针对具体商品。",
+            "suggestion": "应在确认具体商品后直接告知补货进度或登记需求，而非给出通用建议。"
+          },
+          {
+            "tag": "insufficient_empathy",
+            "origin": "reply",
+            "quote": "您好，商品补货时间不固定",
+            "reason": "用户期待购买的商品缺货，回复直接陈述不固定，未表达对用户等待的理解或歉意。",
+            "suggestion": "可先表达理解用户期待的心情，如'很抱歉让您久等了'，再提供解决方案。"
           }
         ],
         "additional_claims": [
           {
-            "quote": "您也可以将商品加入购物车，补货时系统会自动提醒您",
-            "reason": "需要平台功能说明或产品文档证实购物车是否具备缺货自动提醒功能。"
+            "quote": "商品补货时间不固定",
+            "reason": "这是对平台补货机制的事实性描述，需要业务规则或政策证据支持。"
           }
         ]
       },
       "fusion_actions": [],
       "issue_tags": [
         "generic_answer",
+        "insufficient_empathy",
         "missing_clarification"
       ],
       "risk_quotes": [],
       "quality_status": "需要改进",
-      "review_flags": [
-        "下一步被标为轻微缺口，但有效性已判明显缺口，需要复核严重程度。"
-      ],
       "semantic_mode": "llm",
       "reference": {
         "id": "case_19",
@@ -2613,17 +2592,27 @@
       "intent": "操作困难",
       "scores": {
         "relevance": 3,
-        "usefulness": 2,
+        "usefulness": 3,
         "tone": 3,
         "grounding": null
       },
-      "total_score": 63.3,
+      "total_score": 75.0,
       "provisional": true,
       "assessed_weight": 75,
       "score_capped": false,
-      "service_gap": true,
-      "grounding_state": "未检出可核查断言",
-      "claims": [],
+      "service_gap": false,
+      "grounding_state": "待核实",
+      "claims": [
+        {
+          "quote": "退货流程一般包括：1.在订单页面点击退货 2.选择退货原因 3.提交申请等待审核 4.按照退货地址寄回商品。",
+          "types": [
+            "语义补充"
+          ],
+          "status": "unverified",
+          "source": null,
+          "rationale": "这是对平台退货流程的事实断言，需要业务证据（如平台退货政策文档）来核实步骤是否准确完整。"
+        }
+      ],
       "findings": [
         {
           "dimension": "usefulness",
@@ -2636,9 +2625,8 @@
         }
       ],
       "suggestions": [
-        "先询问用户具体卡在哪一步或看到什么界面，再针对性指导。",
-        "直接询问'请问您现在是在订单页面找不到退货按钮，还是提交申请时遇到报错？'",
-        "更充分地承认用户的困扰，如'折腾了半天确实让人着急，我来一步步帮您搞定'。",
+        "先询问用户当前停留在哪一步、使用App还是网页端、是否看到相关按钮等，再针对性指导。",
+        "在致歉后增加对用户耗时体验的理解表达，如'理解您花了很长时间还没弄好确实很着急'。",
         "先询问具体卡点，再给对应步骤。"
       ],
       "rule_coverage": "covered",
@@ -2649,63 +2637,48 @@
         "grounding": null
       },
       "semantic": {
-        "assessment": {
-          "task": "用户在退货流程中卡住，需要定位具体操作障碍并获得协助",
-          "emotion_trigger": "退货流程太复杂了搞半天都不知道怎么操作",
-          "next_step": "minor_gap",
-          "uncertainty": "不清楚用户具体卡在哪个环节、使用什么设备/版本"
-        },
         "scores": {
           "relevance": 3,
-          "usefulness": 2,
+          "usefulness": 3,
           "tone": 3,
           "grounding": null
         },
         "rationales": {
-          "relevance": "主题正确，但用户已表示不会操作，回复仍主要重复通用流程步骤，未优先定位卡点。",
-          "usefulness": "用户明确说'搞半天都不知道怎么操作'属于已卡住状态，回复先列出完整通用流程再让用户截图反馈，对当前困境推动有限。",
-          "tone": "有道歉并表达愿意协助，但对用户明显的挫败感回应略显模板化。",
-          "grounding": "无显式业务证据可供核实。"
+          "relevance": "回复针对用户反馈的退货流程复杂问题提供了通用步骤，但未追问用户具体卡在哪一步或哪个订单，覆盖不够精准。",
+          "usefulness": "给出了基本退货步骤和截图求助的建议，有一定可执行性，但缺少必要澄清以定位用户实际困难点。",
+          "tone": "开头表达了歉意，语气礼貌，但对用户'搞半天'的挫败感共情不足，安抚力度偏弱。",
+          "grounding": "未提供业务证据，claims为空，无法核实所述退货流程是否与平台实际一致，按规则设为null。"
         },
         "issues": [
           {
-            "tag": "intent_mismatch",
-            "severity": "minor",
+            "tag": "missing_clarification",
             "origin": "question",
             "quote": "搞半天都不知道怎么操作",
-            "reason": "用户已在流程中卡住，回复却先重述完整通用退货流程而非直接定位具体障碍点。",
-            "suggestion": "先询问用户具体卡在哪一步或看到什么界面，再针对性指导。"
-          },
-          {
-            "tag": "missing_clarification",
-            "severity": "minor",
-            "origin": "reply",
-            "quote": "如果您在某个环节遇到问题，可以截图发给客服",
-            "reason": "未主动追问用户当前停留在哪一步、看到什么提示，导致无法立即提供精准帮助。",
-            "suggestion": "直接询问'请问您现在是在订单页面找不到退货按钮，还是提交申请时遇到报错？'"
+            "reason": "用户明确表示不知道如何操作，但未说明具体卡在哪个环节或使用什么设备，客服直接给出通用流程而未追问具体情况，可能导致信息不匹配。",
+            "suggestion": "先询问用户当前停留在哪一步、使用App还是网页端、是否看到相关按钮等，再针对性指导。"
           },
           {
             "tag": "insufficient_empathy",
-            "severity": "minor",
             "origin": "question",
             "quote": "退货流程太复杂了搞半天都不知道怎么操作",
-            "reason": "用户表达了明显挫败感和耗时困扰，回复的共情较为简短模板化。",
-            "suggestion": "更充分地承认用户的困扰，如'折腾了半天确实让人着急，我来一步步帮您搞定'。"
+            "reason": "用户表达了明显的烦躁和挫败情绪，回复仅用一句'抱歉给您带来困扰'带过，缺乏对用户花费大量时间仍未解决问题的共情回应。",
+            "suggestion": "在致歉后增加对用户耗时体验的理解表达，如'理解您花了很长时间还没弄好确实很着急'。"
           }
         ],
-        "additional_claims": []
+        "additional_claims": [
+          {
+            "quote": "退货流程一般包括：1.在订单页面点击退货 2.选择退货原因 3.提交申请等待审核 4.按照退货地址寄回商品。",
+            "reason": "这是对平台退货流程的事实断言，需要业务证据（如平台退货政策文档）来核实步骤是否准确完整。"
+          }
+        ]
       },
       "fusion_actions": [],
       "issue_tags": [
         "insufficient_empathy",
-        "intent_mismatch",
         "missing_clarification"
       ],
       "risk_quotes": [],
       "quality_status": "需要改进",
-      "review_flags": [
-        "下一步被标为轻微缺口，但有效性已判明显缺口，需要复核严重程度。"
-      ],
       "semantic_mode": "llm",
       "reference": {
         "id": "case_20",
@@ -2735,10 +2708,10 @@
   "validation": {
     "scope": "服务缺口与回顾性整理标签的一致性；不属于独立盲测或事实核验准确率。",
     "counts": {
-      "tp": 6,
-      "fp": 1,
-      "fn": 5,
-      "tn": 4
+      "tp": 7,
+      "fp": 3,
+      "fn": 4,
+      "tn": 2
     },
     "included": 16,
     "excluded": [
@@ -2764,24 +2737,24 @@
       }
     ],
     "unlabeled_ids": [],
-    "precision": 0.8571,
-    "recall": 0.5455,
+    "precision": 0.7,
+    "recall": 0.6364,
     "f1": 0.6667,
-    "agreement": 0.625,
+    "agreement": 0.5625,
     "details": [
       {
         "id": "case_01",
         "service_gap": true,
         "basis": "原注释：取不到快递，需要帮忙解决；未形成具体处理闭环。",
-        "predicted": false,
-        "outcome": "fn"
+        "predicted": true,
+        "outcome": "tp"
       },
       {
         "id": "case_02",
         "service_gap": true,
         "basis": "原注释：问具体商品，回复只讲一般规定，未获取或核实商品参数。",
-        "predicted": false,
-        "outcome": "fn"
+        "predicted": true,
+        "outcome": "tp"
       },
       {
         "id": "case_03",
@@ -2815,8 +2788,8 @@
         "id": "case_09",
         "service_gap": false,
         "basis": "原注释明确规则说明本身有价值；缺少追问作为轻微改进项。",
-        "predicted": false,
-        "outcome": "tn"
+        "predicted": true,
+        "outcome": "fp"
       },
       {
         "id": "case_10",
@@ -2857,8 +2830,8 @@
         "id": "case_16",
         "service_gap": false,
         "basis": "原注释：信息模糊时追问场景和预算基本合理。",
-        "predicted": false,
-        "outcome": "tn"
+        "predicted": true,
+        "outcome": "fp"
       },
       {
         "id": "case_18",
@@ -2878,8 +2851,8 @@
         "id": "case_20",
         "service_gap": true,
         "basis": "原注释：用户已表示操作困难，重复流程而未定位卡点。",
-        "predicted": true,
-        "outcome": "tp"
+        "predicted": false,
+        "outcome": "fn"
       }
     ]
   },
@@ -2887,79 +2860,79 @@
     "scope": "回顾性多标签校准；未知标签对从分母排除；未列为 positive/unknown 的标签视为负例。",
     "per_tag": {
       "passive_service": {
-        "tp": 2,
+        "tp": 3,
         "fp": 0,
-        "fn": 6,
+        "fn": 5,
         "tn": 7,
         "excluded": 5,
         "precision": 1.0,
-        "recall": 0.25,
-        "f1": 0.4,
+        "recall": 0.375,
+        "f1": 0.5455,
         "support": 8
       },
       "generic_answer": {
-        "tp": 4,
-        "fp": 2,
-        "fn": 2,
-        "tn": 9,
+        "tp": 6,
+        "fp": 7,
+        "fn": 0,
+        "tn": 4,
         "excluded": 3,
-        "precision": 0.6667,
-        "recall": 0.6667,
-        "f1": 0.6667,
+        "precision": 0.4615,
+        "recall": 1.0,
+        "f1": 0.6316,
         "support": 6
       },
       "missing_clarification": {
-        "tp": 11,
+        "tp": 12,
         "fp": 3,
-        "fn": 1,
+        "fn": 0,
         "tn": 2,
         "excluded": 3,
-        "precision": 0.7857,
-        "recall": 0.9167,
-        "f1": 0.8462,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8889,
         "support": 12
       },
       "insufficient_empathy": {
-        "tp": 0,
-        "fp": 1,
-        "fn": 3,
-        "tn": 13,
+        "tp": 1,
+        "fp": 5,
+        "fn": 2,
+        "tn": 9,
         "excluded": 3,
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
+        "precision": 0.1667,
+        "recall": 0.3333,
+        "f1": 0.2222,
         "support": 3
       },
       "intent_mismatch": {
-        "tp": 1,
+        "tp": 0,
         "fp": 0,
-        "fn": 0,
+        "fn": 1,
         "tn": 15,
         "excluded": 4,
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
         "support": 1
       }
     },
     "micro": {
-      "tp": 18,
-      "fp": 6,
-      "fn": 12,
-      "tn": 46,
+      "tp": 22,
+      "fp": 15,
+      "fn": 8,
+      "tn": 37,
       "excluded": 18,
-      "precision": 0.75,
-      "recall": 0.6,
-      "f1": 0.6667,
+      "precision": 0.5946,
+      "recall": 0.7333,
+      "f1": 0.6567,
       "support": 30
     },
-    "macro_f1": 0.5826,
+    "macro_f1": 0.4576,
     "macro_defined_labels": 5,
     "disagreements": [
       {
         "id": "case_01",
-        "tag": "passive_service",
-        "kind": "fn",
+        "tag": "generic_answer",
+        "kind": "fp",
         "basis": "原注释强调主动处理；具体柜信息是否必须在本轮追问有争议，仅标主要问题。"
       },
       {
@@ -2969,12 +2942,6 @@
         "basis": "原注释强调主动处理；具体柜信息是否必须在本轮追问有争议，仅标主要问题。"
       },
       {
-        "id": "case_02",
-        "tag": "generic_answer",
-        "kind": "fn",
-        "basis": "具体充电宝未确认型号或参数，只提供一般规定。"
-      },
-      {
         "id": "case_03",
         "tag": "passive_service",
         "kind": "fn",
@@ -2982,8 +2949,8 @@
       },
       {
         "id": "case_03",
-        "tag": "generic_answer",
-        "kind": "fn",
+        "tag": "insufficient_empathy",
+        "kind": "fp",
         "basis": "未获取订单和实际退款进度，只有通用时效。"
       },
       {
@@ -2997,12 +2964,6 @@
         "tag": "missing_clarification",
         "kind": "fp",
         "basis": "原注释强调排查增加操作负担，归纳为服务推进不足；不是无售后方案。"
-      },
-      {
-        "id": "case_06",
-        "tag": "passive_service",
-        "kind": "fn",
-        "basis": "罗列原因，未收集券或订单信息定位问题。"
       },
       {
         "id": "case_07",
@@ -3018,15 +2979,39 @@
       },
       {
         "id": "case_09",
-        "tag": "missing_clarification",
-        "kind": "fn",
+        "tag": "generic_answer",
+        "kind": "fp",
         "basis": "原注释指出缺少退货原因追问；属于轻微问题，不代表整体不可用。"
       },
       {
-        "id": "case_13",
+        "id": "case_10",
+        "tag": "generic_answer",
+        "kind": "fp",
+        "basis": "原注释明确给出操作路径可接受，不能要求自动回复必须代操作。"
+      },
+      {
+        "id": "case_11",
         "tag": "insufficient_empathy",
+        "kind": "fp",
+        "basis": "未确认两件商品及尺码，通用流程不足以处理具体事项。"
+      },
+      {
+        "id": "case_12",
+        "tag": "passive_service",
         "kind": "fn",
-        "basis": "未提供具体成分且对敏感需求的个性化关怀不足；购买前建议是否构成意图错配有争议。"
+        "basis": "未获取订单，未查询物流或跟进异常。"
+      },
+      {
+        "id": "case_12",
+        "tag": "insufficient_empathy",
+        "kind": "fp",
+        "basis": "未获取订单，未查询物流或跟进异常。"
+      },
+      {
+        "id": "case_14",
+        "tag": "generic_answer",
+        "kind": "fp",
+        "basis": "原注释判断处理不错；询问具体商品属于可选增强。"
       },
       {
         "id": "case_15",
@@ -3045,6 +3030,12 @@
         "tag": "insufficient_empathy",
         "kind": "fn",
         "basis": "原注释明确对连续受损的安抚力度不足；补偿多少需业务依据，不作为判断条件。"
+      },
+      {
+        "id": "case_16",
+        "tag": "generic_answer",
+        "kind": "fp",
+        "basis": "已有预算和场景追问，但未问是哪两款手机，属于局部信息缺口，不等于整体无效。"
       },
       {
         "id": "case_18",
@@ -3059,9 +3050,21 @@
         "basis": "未确认是哪款包，无从查询具体补货时间。"
       },
       {
+        "id": "case_19",
+        "tag": "insufficient_empathy",
+        "kind": "fp",
+        "basis": "未确认是哪款包，无从查询具体补货时间。"
+      },
+      {
         "id": "case_20",
         "tag": "insufficient_empathy",
         "kind": "fp",
+        "basis": "对操作困难重复流程，未先询问具体卡点。"
+      },
+      {
+        "id": "case_20",
+        "tag": "intent_mismatch",
+        "kind": "fn",
         "basis": "对操作困难重复流程，未先询问具体卡点。"
       }
     ],
@@ -3069,7 +3072,7 @@
   },
   "limitations": [
     "规则仅覆盖有限词汇与场景；真实 LLM 也会漏判、过度解释或受表述影响。未触发扣分不代表已确认优质，mock 模式不具备真实语义评审能力。",
-    "原始题目未提供订单、商品、政策或工具记录；补充证据依赖维护者确认来源。待核实不是已证实幻觉；未检出断言也不等于完全无事实风险。",
+    "输入没有订单、商品、政策或工具记录。待核实不是已证实幻觉；未检出断言也不等于完全无事实风险。",
     "综合分在事实维度不可评时重新归一化，仅为暂定质量分，不能据此决定扩大自动回复覆盖。",
     "20 条样本没有抽样方案、日期和业务分布，不能外推总体质量，也不应进行上线前后的因果比较。",
     "复核标签由开发者参考已看过的定性注释整理；程序隔离避免直接读答案，但不能消除设计阶段的偏差。",

@@ -1,0 +1,19 @@
+{
+  "mode": "real_agent_browser_test",
+  "passed": true,
+  "checks": [
+    "initial dataset and v3 score",
+    "desktop layout",
+    "real natural-language case explanation",
+    "tool trace",
+    "case evidence",
+    "request evidence dialog",
+    "session-only evidence recalculation",
+    "evidence invalidates old report link",
+    "invalid upload rejection",
+    "new dataset clears old scores and report link",
+    "reset",
+    "mobile layout",
+    "no JS errors"
+  ]
+}

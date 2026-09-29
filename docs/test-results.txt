@@ -1,3 +1,20 @@
+test_arbitrary_tool_and_extra_args_rejected (test_agent.AgentTests.test_arbitrary_tool_and_extra_args_rejected) ... ok
+test_evidence_requires_exact_case_claim (test_agent.AgentTests.test_evidence_requires_exact_case_claim) ... ok
+test_evidence_updates_only_its_session (test_agent.AgentTests.test_evidence_updates_only_its_session) ... ok
+test_finish_does_not_require_next_step_display_text (test_agent.AgentTests.test_finish_does_not_require_next_step_display_text) ... ok
+test_malformed_decision_cannot_execute_and_can_be_repaired (test_agent.AgentTests.test_malformed_decision_cannot_execute_and_can_be_repaired) ... ok
+test_no_result_cannot_reuse_old_numbers (test_agent.AgentTests.test_no_result_cannot_reuse_old_numbers) ... ok
+test_output_check_retries_with_actual_scale (test_agent.AgentTests.test_output_check_retries_with_actual_scale) ... ok
+test_repeated_invalid_decisions_fail_explicitly (test_agent.AgentTests.test_repeated_invalid_decisions_fail_explicitly) ... ok
+test_semantic_judgement_can_be_reused_without_exposing_references_to_planner_as_instructions (test_agent.AgentTests.test_semantic_judgement_can_be_reused_without_exposing_references_to_planner_as_instructions) ... ok
+test_tool_loop_runs_and_cites_observed_case (test_agent.AgentTests.test_tool_loop_runs_and_cites_observed_case) ... ok
+test_unknown_citation_requires_repair (test_agent.AgentTests.test_unknown_citation_requires_repair) ... ok
+test_upload_rejects_duplicates_and_drops_extra_fields (test_agent.AgentTests.test_upload_rejects_duplicates_and_drops_extra_fields) ... ok
+test_wrong_dimension_denominator_is_not_delivered (test_agent.AgentTests.test_wrong_dimension_denominator_is_not_delivered) ... ok
+test_bad_host_is_rejected (test_agent.HTTPTests.test_bad_host_is_rejected) ... ok
+test_mutation_requires_local_token (test_agent.HTTPTests.test_mutation_requires_local_token) ... ok
+test_static_server_does_not_expose_secrets_or_paths (test_agent.HTTPTests.test_static_server_does_not_expose_secrets_or_paths) ... ok
+test_upload_clears_previous_result_and_history (test_agent.HTTPTests.test_upload_clears_previous_result_and_history) ... ok
 test_boolean_and_nan_scores_rejected (test_pipeline.EvaluationTests.test_boolean_and_nan_scores_rejected) ... ok
 test_case_id_and_input_order_do_not_change_scoring (test_pipeline.EvaluationTests.test_case_id_and_input_order_do_not_change_scoring) ... ok
 test_conflicting_workflows_are_gated (test_pipeline.EvaluationTests.test_conflicting_workflows_are_gated) ... ok
@@ -24,6 +41,6 @@ test_unknown_is_not_false (test_pipeline.EvaluationTests.test_unknown_is_not_fal
 test_unknown_multilabel_pair_excluded (test_pipeline.EvaluationTests.test_unknown_multilabel_pair_excluded) ... ok
 
 ----------------------------------------------------------------------
-Ran 24 tests in 0.076s
+Ran 41 tests in 0.735s
 
 OK

@@ -24,9 +24,9 @@ def mock_judge(baseline):
     for finding in baseline["findings"]:
         for tag in RULE_TAGS.get(finding["rule"], []):
             if tag not in seen:
-                issues.append({"tag": tag, **{k: finding[k] for k in ("origin", "quote", "reason", "suggestion")}})
+                issues.append({"tag": tag, 'severity': 'major' if finding['deduction'] >= 2 else 'minor', **{k: finding[k] for k in ("origin", "quote", "reason", "suggestion")}})
                 seen.add(tag)
-    return {"scores": dict(baseline["scores"]),
+    return {'assessment': {'task':baseline['intent'], 'emotion_trigger':'', 'next_step':'blocked' if baseline['service_gap'] else 'ready', 'uncertainty':'动态规则模拟，不具有真实语义理解。'}, "scores": dict(baseline["scores"]),
             "rationales": {k: "动态 mock：依据规则命中生成，未调用真实语义模型。" for k in baseline["scores"]},
             "issues": issues, "additional_claims": []}
 
@@ -36,7 +36,8 @@ def nonempty(value):
 
 
 def validate_judgment(data, row):
-    if not isinstance(data, dict) or set(data) != {"scores", "rationales", "issues", "additional_claims"}:
+    required = {"scores", "rationales", "issues", "additional_claims"}
+    if not isinstance(data, dict) or not required <= set(data) or set(data) - required - {'assessment'}:
         raise ValueError("语义输出字段不符合协议")
     keys = {"relevance", "usefulness", "tone", "grounding"}
     if not isinstance(data["scores"], dict) or set(data["scores"]) != keys:
@@ -51,8 +52,11 @@ def validate_judgment(data, row):
     if not isinstance(data["issues"], list) or not isinstance(data["additional_claims"], list):
         raise ValueError("issues 和 additional_claims 必须为数组")
     for issue in data["issues"]:
-        if not isinstance(issue, dict) or set(issue) != {"tag", "origin", "quote", "reason", "suggestion"}:
+        fields = {"tag", "origin", "quote", "reason", "suggestion"}
+        if not isinstance(issue, dict) or not fields <= set(issue) or set(issue) - fields - {'severity'}:
             raise ValueError("问题标签字段不合法")
+        if 'severity' in issue and issue['severity'] not in ('minor', 'major'):
+            raise ValueError('问题严重程度必须是 minor 或 major')
         if issue["tag"] not in TAGS or issue["origin"] not in ("question", "reply"):
             raise ValueError("问题标签或原文来源不合法")
         text = row["user_question"] if issue["origin"] == "question" else row["auto_reply"]
@@ -61,6 +65,12 @@ def validate_judgment(data, row):
     for claim in data["additional_claims"]:
         if not isinstance(claim, dict) or set(claim) != {"quote", "reason"} or not all(nonempty(v) for v in claim.values()) or claim["quote"] not in row["auto_reply"]:
             raise ValueError("模型补充断言缺少原文证据")
+    if 'assessment' in data:
+        a = data['assessment']
+        if not isinstance(a, dict) or set(a) != {'task', 'emotion_trigger', 'next_step', 'uncertainty'} or not all(isinstance(v,str) for v in a.values()):
+            raise ValueError('服务任务判断结构不合法')
+        if not a['task'].strip() or a['next_step'] not in ('ready','minor_gap','blocked') or a['emotion_trigger'] not in row['user_question']:
+            raise ValueError('服务任务状态或情绪证据不合法')
     return data
 
 
@@ -140,8 +150,12 @@ class LLMClient:
 
     def judge(self, row, baseline):
         prompt = (ROOT / "prompts" / "judge.md").read_text(encoding="utf-8")
-        return self.request(prompt, {"question": row["user_question"], "reply": row["auto_reply"], "claims": baseline["claims"]},
-                            lambda data: validate_judgment(data, row))
+        def validator(data):
+            result = validate_judgment(data, row)
+            if 'assessment' not in result or any('severity' not in issue for issue in result['issues']):
+                raise ValueError('v3 真实评估必须包含任务判断和问题严重程度')
+            return result
+        return self.request(prompt, {"question": row["user_question"], "reply": row["auto_reply"], "claims": baseline["claims"]}, validator)
 
 
 def fuse(baseline, semantic, config, evidence):
@@ -184,4 +198,17 @@ def fuse(baseline, semantic, config, evidence):
     result["risk_quotes"] = risk_quotes
     result["quality_status"] = "高风险待复核" if result["score_capped"] or risk_quotes else "需要改进" if result["total_score"] < config["acceptable_threshold"] or result["service_gap"] else "可接受（暂定）" if result["provisional"] else "可接受"
     result["suggestions"] = list(dict.fromkeys([i["suggestion"] for i in semantic["issues"]] + baseline["suggestions"]))
+    result['review_flags'] = []
+    assessment = semantic.get('assessment', {})
+    if assessment.get('next_step') == 'blocked' and result['scores']['usefulness'] > 2:
+        result['review_flags'].append('任务被判断为受阻，但有效性评分大于2，需要复核量表一致性。')
+    if assessment.get('next_step') == 'ready' and result['scores']['usefulness'] <= 2:
+        result['review_flags'].append('已有可执行路径与低有效性评分不一致，需要复核。')
+    if assessment.get('next_step') == 'minor_gap' and result['scores']['usefulness'] <= 2:
+        result['review_flags'].append('下一步被标为轻微缺口，但有效性已判明显缺口，需要复核严重程度。')
+    if 'insufficient_empathy' in result['issue_tags'] and not assessment.get('emotion_trigger') and assessment:
+        result['review_flags'].append('共情缺口缺少用户情绪或特殊需求原文证据。')
+    # Generic fallback praise from the baseline is not a useful suggestion when semantic issues exist.
+    if semantic['issues']:
+        result['suggestions'] = [s for s in result['suggestions'] if not s.startswith('保留当前表达')]
     return result

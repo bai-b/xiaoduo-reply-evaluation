@@ -1,0 +1,627 @@
+{
+  "label_files_unchanged": true,
+  "label_sha256": {
+    "issue_labels.json": "87b4f2dada88724ebf91486cd819c1da5a31a5f2a47667870731ed045ecec725",
+    "review_labels.json": "7963471fa4c71726e1883bc5687045e7c2d0ff3f46950ec64226d4a9888174b5"
+  },
+  "scope": "已见开发数据的回顾性比较；人工构造行为测试不是独立真实业务盲测。",
+  "versions": {
+    "v2": {
+      "summary": {
+        "count": 20,
+        "mean_score": 70.9,
+        "provisional_count": 20,
+        "service_gap_count": 12,
+        "capped_count": 1,
+        "uncovered_count": 0,
+        "claim_count": 29,
+        "verified_claim_count": 0,
+        "claim_coverage": 0.0,
+        "claim_statuses": {
+          "supported": 0,
+          "contradicted": 0,
+          "unverified": 29
+        },
+        "dimensions": {
+          "relevance": {
+            "name": "切题与一致性",
+            "mean": 78.8,
+            "assessed": 20,
+            "na": 0,
+            "distribution": {
+              "0": 0,
+              "1": 0,
+              "2": 2,
+              "3": 13,
+              "4": 5
+            }
+          },
+          "usefulness": {
+            "name": "问题解决有效性",
+            "mean": 60.0,
+            "assessed": 20,
+            "na": 0,
+            "distribution": {
+              "0": 0,
+              "1": 0,
+              "2": 12,
+              "3": 8,
+              "4": 0
+            }
+          },
+          "tone": {
+            "name": "语气与情境关怀",
+            "mean": 85.0,
+            "assessed": 20,
+            "na": 0,
+            "distribution": {
+              "0": 0,
+              "1": 0,
+              "2": 0,
+              "3": 12,
+              "4": 8
+            }
+          },
+          "grounding": {
+            "name": "事实依据",
+            "mean": null,
+            "assessed": 0,
+            "na": 20,
+            "distribution": {
+              "0": 0,
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0
+            }
+          }
+        },
+        "worst_ids": [
+          "case_11",
+          "case_16",
+          "case_01"
+        ],
+        "common_findings": [
+          {
+            "rule": "U02",
+            "count": 9
+          },
+          {
+            "rule": "T02",
+            "count": 1
+          },
+          {
+            "rule": "U05",
+            "count": 1
+          },
+          {
+            "rule": "T03",
+            "count": 1
+          },
+          {
+            "rule": "R03",
+            "count": 1
+          },
+          {
+            "rule": "U06",
+            "count": 1
+          },
+          {
+            "rule": "U07",
+            "count": 1
+          },
+          {
+            "rule": "U04",
+            "count": 1
+          }
+        ]
+      },
+      "micro": {
+        "tp": 22,
+        "fp": 15,
+        "fn": 8,
+        "tn": 37,
+        "excluded": 18,
+        "precision": 0.5946,
+        "recall": 0.7333,
+        "f1": 0.6567,
+        "support": 30
+      },
+      "macro_f1": 0.4576,
+      "binary_service_gap_f1": 0.6667,
+      "per_tag": {
+        "passive_service": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 5,
+          "tn": 7,
+          "excluded": 5,
+          "precision": 1.0,
+          "recall": 0.375,
+          "f1": 0.5455,
+          "support": 8
+        },
+        "generic_answer": {
+          "tp": 6,
+          "fp": 7,
+          "fn": 0,
+          "tn": 4,
+          "excluded": 3,
+          "precision": 0.4615,
+          "recall": 1.0,
+          "f1": 0.6316,
+          "support": 6
+        },
+        "missing_clarification": {
+          "tp": 12,
+          "fp": 3,
+          "fn": 0,
+          "tn": 2,
+          "excluded": 3,
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.8889,
+          "support": 12
+        },
+        "insufficient_empathy": {
+          "tp": 1,
+          "fp": 5,
+          "fn": 2,
+          "tn": 9,
+          "excluded": 3,
+          "precision": 0.1667,
+          "recall": 0.3333,
+          "f1": 0.2222,
+          "support": 3
+        },
+        "intent_mismatch": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "tn": 15,
+          "excluded": 4,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        }
+      },
+      "behavior": {
+        "passed_assertions": 33,
+        "assertions": 34,
+        "passed_cases": 9,
+        "cases": 10
+      }
+    },
+    "v3": {
+      "summary": {
+        "count": 20,
+        "mean_score": 79.8,
+        "provisional_count": 20,
+        "service_gap_count": 8,
+        "capped_count": 1,
+        "uncovered_count": 0,
+        "claim_count": 25,
+        "verified_claim_count": 0,
+        "claim_coverage": 0.0,
+        "claim_statuses": {
+          "supported": 0,
+          "contradicted": 0,
+          "unverified": 25
+        },
+        "dimensions": {
+          "relevance": {
+            "name": "切题与一致性",
+            "mean": 88.8,
+            "assessed": 20,
+            "na": 0,
+            "distribution": {
+              "0": 0,
+              "1": 0,
+              "2": 1,
+              "3": 7,
+              "4": 12
+            }
+          },
+          "usefulness": {
+            "name": "问题解决有效性",
+            "mean": 67.5,
+            "assessed": 20,
+            "na": 0,
+            "distribution": {
+              "0": 0,
+              "1": 0,
+              "2": 8,
+              "3": 10,
+              "4": 2
+            }
+          },
+          "tone": {
+            "name": "语气与情境关怀",
+            "mean": 96.2,
+            "assessed": 20,
+            "na": 0,
+            "distribution": {
+              "0": 0,
+              "1": 0,
+              "2": 0,
+              "3": 3,
+              "4": 17
+            }
+          },
+          "grounding": {
+            "name": "事实依据",
+            "mean": null,
+            "assessed": 0,
+            "na": 20,
+            "distribution": {
+              "0": 0,
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0
+            }
+          }
+        },
+        "worst_ids": [
+          "case_11",
+          "case_13",
+          "case_18"
+        ],
+        "common_findings": [
+          {
+            "rule": "U02",
+            "count": 9
+          },
+          {
+            "rule": "T02",
+            "count": 1
+          },
+          {
+            "rule": "U05",
+            "count": 1
+          },
+          {
+            "rule": "T03",
+            "count": 1
+          },
+          {
+            "rule": "R03",
+            "count": 1
+          },
+          {
+            "rule": "U06",
+            "count": 1
+          },
+          {
+            "rule": "U07",
+            "count": 1
+          },
+          {
+            "rule": "U04",
+            "count": 1
+          }
+        ]
+      },
+      "micro": {
+        "tp": 18,
+        "fp": 6,
+        "fn": 12,
+        "tn": 46,
+        "excluded": 18,
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1": 0.6667,
+        "support": 30
+      },
+      "macro_f1": 0.5826,
+      "binary_service_gap_f1": 0.6667,
+      "per_tag": {
+        "passive_service": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 6,
+          "tn": 7,
+          "excluded": 5,
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4,
+          "support": 8
+        },
+        "generic_answer": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 2,
+          "tn": 9,
+          "excluded": 3,
+          "precision": 0.6667,
+          "recall": 0.6667,
+          "f1": 0.6667,
+          "support": 6
+        },
+        "missing_clarification": {
+          "tp": 11,
+          "fp": 3,
+          "fn": 1,
+          "tn": 2,
+          "excluded": 3,
+          "precision": 0.7857,
+          "recall": 0.9167,
+          "f1": 0.8462,
+          "support": 12
+        },
+        "insufficient_empathy": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 3,
+          "tn": 13,
+          "excluded": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        "intent_mismatch": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "tn": 15,
+          "excluded": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        }
+      },
+      "behavior": {
+        "passed_assertions": 34,
+        "assertions": 34,
+        "passed_cases": 10,
+        "cases": 10
+      }
+    }
+  },
+  "changes": [
+    {
+      "id": "case_01",
+      "old_score": 63.3,
+      "new_score": 88.3,
+      "old_tags": [
+        "generic_answer",
+        "missing_clarification",
+        "passive_service"
+      ],
+      "new_tags": [
+        "missing_clarification"
+      ]
+    },
+    {
+      "id": "case_02",
+      "old_score": 68.3,
+      "new_score": 88.3,
+      "old_tags": [
+        "generic_answer",
+        "missing_clarification"
+      ],
+      "new_tags": [
+        "missing_clarification"
+      ]
+    },
+    {
+      "id": "case_03",
+      "old_score": 75.0,
+      "new_score": 88.3,
+      "old_tags": [
+        "generic_answer",
+        "insufficient_empathy",
+        "missing_clarification"
+      ],
+      "new_tags": [
+        "missing_clarification"
+      ]
+    },
+    {
+      "id": "case_04",
+      "old_score": 88.3,
+      "new_score": 88.3,
+      "old_tags": [
+        "missing_clarification"
+      ],
+      "new_tags": [
+        "missing_clarification"
+      ]
+    },
+    {
+      "id": "case_05",
+      "old_score": 88.3,
+      "new_score": 88.3,
+      "old_tags": [
+        "missing_clarification"
+      ],
+      "new_tags": []
+    },
+    {
+      "id": "case_06",
+      "old_score": 63.3,
+      "new_score": 68.3,
+      "old_tags": [
+        "generic_answer",
+        "missing_clarification",
+        "passive_service"
+      ],
+      "new_tags": [
+        "generic_answer",
+        "missing_clarification"
+      ]
+    },
+    {
+      "id": "case_07",
+      "old_score": 88.3,
+      "new_score": 88.3,
+      "old_tags": [
+        "missing_clarification"
+      ],
+      "new_tags": [
+        "missing_clarification"
+      ]
+    },
+    {
+      "id": "case_08",
+      "old_score": 80.0,
+      "new_score": 100.0,
+      "old_tags": [
+        "missing_clarification"
+      ],
+      "new_tags": []
+    },
+    {
+      "id": "case_09",
+      "old_score": 63.3,
+      "new_score": 88.3,
+      "old_tags": [
+        "generic_answer",
+        "missing_clarification"
+      ],
+      "new_tags": []
+    },
+    {
+      "id": "case_10",
+      "old_score": 88.3,
+      "new_score": 100.0,
+      "old_tags": [
+        "generic_answer"
+      ],
+      "new_tags": []
+    },
+    {
+      "id": "case_11",
+      "old_score": 49,
+      "new_score": 49,
+      "old_tags": [
+        "generic_answer",
+        "insufficient_empathy",
+        "missing_clarification"
+      ],
+      "new_tags": [
+        "generic_answer",
+        "missing_clarification"
+      ]
+    },
+    {
+      "id": "case_12",
+      "old_score": 63.3,
+      "new_score": 68.3,
+      "old_tags": [
+        "generic_answer",
+        "insufficient_empathy",
+        "missing_clarification"
+      ],
+      "new_tags": [
+        "generic_answer",
+        "missing_clarification",
+        "passive_service"
+      ]
+    },
+    {
+      "id": "case_13",
+      "old_score": 63.3,
+      "new_score": 63.3,
+      "old_tags": [
+        "insufficient_empathy",
+        "missing_clarification",
+        "passive_service"
+      ],
+      "new_tags": [
+        "missing_clarification",
+        "passive_service"
+      ]
+    },
+    {
+      "id": "case_14",
+      "old_score": 88.3,
+      "new_score": 88.3,
+      "old_tags": [
+        "generic_answer"
+      ],
+      "new_tags": []
+    },
+    {
+      "id": "case_15",
+      "old_score": 68.3,
+      "new_score": 68.3,
+      "old_tags": [
+        "generic_answer",
+        "missing_clarification"
+      ],
+      "new_tags": [
+        "generic_answer",
+        "missing_clarification"
+      ]
+    },
+    {
+      "id": "case_16",
+      "old_score": 55.0,
+      "new_score": 88.3,
+      "old_tags": [
+        "generic_answer",
+        "missing_clarification"
+      ],
+      "new_tags": [
+        "missing_clarification"
+      ]
+    },
+    {
+      "id": "case_17",
+      "old_score": 63.3,
+      "new_score": 88.3,
+      "old_tags": [
+        "generic_answer",
+        "missing_clarification"
+      ],
+      "new_tags": [
+        "missing_clarification"
+      ]
+    },
+    {
+      "id": "case_18",
+      "old_score": 63.3,
+      "new_score": 63.3,
+      "old_tags": [
+        "generic_answer",
+        "missing_clarification"
+      ],
+      "new_tags": [
+        "generic_answer",
+        "missing_clarification"
+      ]
+    },
+    {
+      "id": "case_19",
+      "old_score": 63.3,
+      "new_score": 68.3,
+      "old_tags": [
+        "generic_answer",
+        "insufficient_empathy",
+        "missing_clarification"
+      ],
+      "new_tags": [
+        "generic_answer",
+        "missing_clarification"
+      ]
+    },
+    {
+      "id": "case_20",
+      "old_score": 75.0,
+      "new_score": 63.3,
+      "old_tags": [
+        "insufficient_empathy",
+        "missing_clarification"
+      ],
+      "new_tags": [
+        "insufficient_empathy",
+        "intent_mismatch",
+        "missing_clarification"
+      ]
+    }
+  ]
+}
