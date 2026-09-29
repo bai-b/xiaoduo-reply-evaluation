@@ -1,0 +1,18 @@
+{
+  "browser": "Microsoft Edge / Playwright",
+  "checks": [
+    "20 cases render",
+    "real mode visible",
+    "desktop no horizontal overflow",
+    "search",
+    "case expansion",
+    "empty state",
+    "risk filter",
+    "score sort",
+    "calibration tab",
+    "method tab",
+    "mobile no horizontal overflow",
+    "no JS errors"
+  ],
+  "passed": true
+}

@@ -1,0 +1,214 @@
+{
+  "scope": "回顾性多标签校准；未知标签对从分母排除；未列为 positive/unknown 的标签视为负例。",
+  "per_tag": {
+    "passive_service": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 5,
+      "tn": 7,
+      "excluded": 5,
+      "precision": 1.0,
+      "recall": 0.375,
+      "f1": 0.5455,
+      "support": 8
+    },
+    "generic_answer": {
+      "tp": 6,
+      "fp": 7,
+      "fn": 0,
+      "tn": 4,
+      "excluded": 3,
+      "precision": 0.4615,
+      "recall": 1.0,
+      "f1": 0.6316,
+      "support": 6
+    },
+    "missing_clarification": {
+      "tp": 12,
+      "fp": 3,
+      "fn": 0,
+      "tn": 2,
+      "excluded": 3,
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "support": 12
+    },
+    "insufficient_empathy": {
+      "tp": 1,
+      "fp": 5,
+      "fn": 2,
+      "tn": 9,
+      "excluded": 3,
+      "precision": 0.1667,
+      "recall": 0.3333,
+      "f1": 0.2222,
+      "support": 3
+    },
+    "intent_mismatch": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "tn": 15,
+      "excluded": 4,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 1
+    }
+  },
+  "micro": {
+    "tp": 22,
+    "fp": 15,
+    "fn": 8,
+    "tn": 37,
+    "excluded": 18,
+    "precision": 0.5946,
+    "recall": 0.7333,
+    "f1": 0.6567,
+    "support": 30
+  },
+  "macro_f1": 0.4576,
+  "macro_defined_labels": 5,
+  "disagreements": [
+    {
+      "id": "case_01",
+      "tag": "generic_answer",
+      "kind": "fp",
+      "basis": "原注释强调主动处理；具体柜信息是否必须在本轮追问有争议，仅标主要问题。"
+    },
+    {
+      "id": "case_01",
+      "tag": "missing_clarification",
+      "kind": "fp",
+      "basis": "原注释强调主动处理；具体柜信息是否必须在本轮追问有争议，仅标主要问题。"
+    },
+    {
+      "id": "case_03",
+      "tag": "passive_service",
+      "kind": "fn",
+      "basis": "未获取订单和实际退款进度，只有通用时效。"
+    },
+    {
+      "id": "case_03",
+      "tag": "insufficient_empathy",
+      "kind": "fp",
+      "basis": "未获取订单和实际退款进度，只有通用时效。"
+    },
+    {
+      "id": "case_04",
+      "tag": "passive_service",
+      "kind": "fn",
+      "basis": "原注释强调排查增加操作负担，归纳为服务推进不足；不是无售后方案。"
+    },
+    {
+      "id": "case_04",
+      "tag": "missing_clarification",
+      "kind": "fp",
+      "basis": "原注释强调排查增加操作负担，归纳为服务推进不足；不是无售后方案。"
+    },
+    {
+      "id": "case_07",
+      "tag": "passive_service",
+      "kind": "fn",
+      "basis": "原注释肯定安全提醒，但指出未确认真实性及安抚不足。"
+    },
+    {
+      "id": "case_07",
+      "tag": "insufficient_empathy",
+      "kind": "fn",
+      "basis": "原注释肯定安全提醒，但指出未确认真实性及安抚不足。"
+    },
+    {
+      "id": "case_09",
+      "tag": "generic_answer",
+      "kind": "fp",
+      "basis": "原注释指出缺少退货原因追问；属于轻微问题，不代表整体不可用。"
+    },
+    {
+      "id": "case_10",
+      "tag": "generic_answer",
+      "kind": "fp",
+      "basis": "原注释明确给出操作路径可接受，不能要求自动回复必须代操作。"
+    },
+    {
+      "id": "case_11",
+      "tag": "insufficient_empathy",
+      "kind": "fp",
+      "basis": "未确认两件商品及尺码，通用流程不足以处理具体事项。"
+    },
+    {
+      "id": "case_12",
+      "tag": "passive_service",
+      "kind": "fn",
+      "basis": "未获取订单，未查询物流或跟进异常。"
+    },
+    {
+      "id": "case_12",
+      "tag": "insufficient_empathy",
+      "kind": "fp",
+      "basis": "未获取订单，未查询物流或跟进异常。"
+    },
+    {
+      "id": "case_14",
+      "tag": "generic_answer",
+      "kind": "fp",
+      "basis": "原注释判断处理不错；询问具体商品属于可选增强。"
+    },
+    {
+      "id": "case_15",
+      "tag": "generic_answer",
+      "kind": "fp",
+      "basis": "原注释明确对连续受损的安抚力度不足；补偿多少需业务依据，不作为判断条件。"
+    },
+    {
+      "id": "case_15",
+      "tag": "missing_clarification",
+      "kind": "fp",
+      "basis": "原注释明确对连续受损的安抚力度不足；补偿多少需业务依据，不作为判断条件。"
+    },
+    {
+      "id": "case_15",
+      "tag": "insufficient_empathy",
+      "kind": "fn",
+      "basis": "原注释明确对连续受损的安抚力度不足；补偿多少需业务依据，不作为判断条件。"
+    },
+    {
+      "id": "case_16",
+      "tag": "generic_answer",
+      "kind": "fp",
+      "basis": "已有预算和场景追问，但未问是哪两款手机，属于局部信息缺口，不等于整体无效。"
+    },
+    {
+      "id": "case_18",
+      "tag": "generic_answer",
+      "kind": "fp",
+      "basis": "原注释指出未确认退款或换新偏好，属于轻微服务选择缺口。"
+    },
+    {
+      "id": "case_19",
+      "tag": "passive_service",
+      "kind": "fn",
+      "basis": "未确认是哪款包，无从查询具体补货时间。"
+    },
+    {
+      "id": "case_19",
+      "tag": "insufficient_empathy",
+      "kind": "fp",
+      "basis": "未确认是哪款包，无从查询具体补货时间。"
+    },
+    {
+      "id": "case_20",
+      "tag": "insufficient_empathy",
+      "kind": "fp",
+      "basis": "对操作困难重复流程，未先询问具体卡点。"
+    },
+    {
+      "id": "case_20",
+      "tag": "intent_mismatch",
+      "kind": "fn",
+      "basis": "对操作困难重复流程，未先询问具体卡点。"
+    }
+  ],
+  "unlabeled_ids": []
+}

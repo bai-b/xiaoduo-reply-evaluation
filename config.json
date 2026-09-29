@@ -1,0 +1,7 @@
+{
+  "weights": {"relevance": 25, "usefulness": 35, "tone": 15, "grounding": 25},
+  "hard_gate_cap": 49,
+  "acceptable_threshold": 80,
+  "service_gap_max_score": 2,
+  "prompt_version": "2.0.0"
+}

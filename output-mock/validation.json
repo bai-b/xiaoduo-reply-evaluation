@@ -1,0 +1,151 @@
+{
+  "scope": "服务缺口与回顾性整理标签的一致性；不属于独立盲测或事实核验准确率。",
+  "counts": {
+    "tp": 11,
+    "fp": 0,
+    "fn": 0,
+    "tn": 5
+  },
+  "included": 16,
+  "excluded": [
+    {
+      "id": "case_05",
+      "service_gap": null,
+      "basis": "原注释称没有立即帮忙，但原回复已写“请问您遇到了什么问题？我现在就帮您处理”；排除争议。"
+    },
+    {
+      "id": "case_08",
+      "service_gap": null,
+      "basis": "原注释说正确但没用，但原回复已经直接给出 TPU 材质；不能仅因附加详情页入口判无用。"
+    },
+    {
+      "id": "case_15",
+      "service_gap": null,
+      "basis": "原注释主要认为补偿和语气力度不足；缺少补偿政策，严重程度主观，排除。"
+    },
+    {
+      "id": "case_17",
+      "service_gap": null,
+      "basis": "原注释称没有主动帮查，但原回复已请求订单号并表示可查询；多问题指代也可能有歧义。"
+    }
+  ],
+  "unlabeled_ids": [],
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "agreement": 1.0,
+  "details": [
+    {
+      "id": "case_01",
+      "service_gap": true,
+      "basis": "原注释：取不到快递，需要帮忙解决；未形成具体处理闭环。",
+      "predicted": true,
+      "outcome": "tp"
+    },
+    {
+      "id": "case_02",
+      "service_gap": true,
+      "basis": "原注释：问具体商品，回复只讲一般规定，未获取或核实商品参数。",
+      "predicted": true,
+      "outcome": "tp"
+    },
+    {
+      "id": "case_03",
+      "service_gap": true,
+      "basis": "原注释：需要查具体订单，没有查询实际状态。",
+      "predicted": true,
+      "outcome": "tp"
+    },
+    {
+      "id": "case_04",
+      "service_gap": true,
+      "basis": "原注释：新购故障先要求多项排查，增加操作负担。",
+      "predicted": true,
+      "outcome": "tp"
+    },
+    {
+      "id": "case_06",
+      "service_gap": true,
+      "basis": "原注释：列举原因，没有获取具体信息帮助排查。",
+      "predicted": true,
+      "outcome": "tp"
+    },
+    {
+      "id": "case_07",
+      "service_gap": true,
+      "basis": "原注释：缺乏对实际登录提醒的核实闭环；防诈骗提醒仍有价值。",
+      "predicted": true,
+      "outcome": "tp"
+    },
+    {
+      "id": "case_09",
+      "service_gap": false,
+      "basis": "原注释明确规则说明本身有价值；缺少追问作为轻微改进项。",
+      "predicted": false,
+      "outcome": "tn"
+    },
+    {
+      "id": "case_10",
+      "service_gap": false,
+      "basis": "原注释明确操作路径可接受，自动系统不必实际替用户操作。",
+      "predicted": false,
+      "outcome": "tn"
+    },
+    {
+      "id": "case_11",
+      "service_gap": true,
+      "basis": "原注释：未确认两件商品及目标尺码；只给通用流程。",
+      "predicted": true,
+      "outcome": "tp"
+    },
+    {
+      "id": "case_12",
+      "service_gap": true,
+      "basis": "原注释：未查当前物流状态，未形成异常跟进闭环。",
+      "predicted": true,
+      "outcome": "tp"
+    },
+    {
+      "id": "case_13",
+      "service_gap": true,
+      "basis": "原注释：让敏感肌用户自己找资料，未满足具体成分请求。",
+      "predicted": true,
+      "outcome": "tp"
+    },
+    {
+      "id": "case_14",
+      "service_gap": false,
+      "basis": "原注释：建议类反馈处理得不错，具体追问是增强项。",
+      "predicted": false,
+      "outcome": "tn"
+    },
+    {
+      "id": "case_16",
+      "service_gap": false,
+      "basis": "原注释：信息模糊时追问场景和预算基本合理。",
+      "predicted": false,
+      "outcome": "tn"
+    },
+    {
+      "id": "case_18",
+      "service_gap": false,
+      "basis": "原注释：给出解决方案，整体质量尚可；政策真实性另行核验。",
+      "predicted": false,
+      "outcome": "tn"
+    },
+    {
+      "id": "case_19",
+      "service_gap": true,
+      "basis": "原注释：未确认具体商品，不能回应特定商品的补货时间。",
+      "predicted": true,
+      "outcome": "tp"
+    },
+    {
+      "id": "case_20",
+      "service_gap": true,
+      "basis": "原注释：用户已表示操作困难，重复流程而未定位卡点。",
+      "predicted": true,
+      "outcome": "tp"
+    }
+  ]
+}

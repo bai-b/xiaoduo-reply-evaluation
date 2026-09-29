@@ -1,0 +1,22 @@
+[
+ {"id":"case_01","positive":["passive_service"],"unknown":[],"basis":"原注释强调主动处理；具体柜信息是否必须在本轮追问有争议，仅标主要问题。"},
+ {"id":"case_02","positive":["generic_answer","missing_clarification"],"unknown":[],"basis":"具体充电宝未确认型号或参数，只提供一般规定。"},
+ {"id":"case_03","positive":["generic_answer","passive_service","missing_clarification"],"unknown":[],"basis":"未获取订单和实际退款进度，只有通用时效。"},
+ {"id":"case_04","positive":["passive_service"],"unknown":[],"basis":"原注释强调排查增加操作负担，归纳为服务推进不足；不是无售后方案。"},
+ {"id":"case_05","positive":[],"unknown":["passive_service","generic_answer","missing_clarification","insufficient_empathy","intent_mismatch"],"basis":"注释与已提供即时协助的原回复存在争议，全部标签暂不评分。"},
+ {"id":"case_06","positive":["generic_answer","passive_service","missing_clarification"],"unknown":[],"basis":"罗列原因，未收集券或订单信息定位问题。"},
+ {"id":"case_07","positive":["passive_service","missing_clarification","insufficient_empathy"],"unknown":[],"basis":"原注释肯定安全提醒，但指出未确认真实性及安抚不足。"},
+ {"id":"case_08","positive":[],"unknown":["passive_service","generic_answer","missing_clarification","insufficient_empathy","intent_mismatch"],"basis":"原回复已经直接给出材质，与注释“正确但没用”的理由冲突。"},
+ {"id":"case_09","positive":["missing_clarification"],"unknown":[],"basis":"原注释指出缺少退货原因追问；属于轻微问题，不代表整体不可用。"},
+ {"id":"case_10","positive":[],"unknown":[],"basis":"原注释明确给出操作路径可接受，不能要求自动回复必须代操作。"},
+ {"id":"case_11","positive":["generic_answer","missing_clarification"],"unknown":[],"basis":"未确认两件商品及尺码，通用流程不足以处理具体事项。"},
+ {"id":"case_12","positive":["generic_answer","passive_service","missing_clarification"],"unknown":[],"basis":"未获取订单，未查询物流或跟进异常。"},
+ {"id":"case_13","positive":["passive_service","missing_clarification","insufficient_empathy"],"unknown":["intent_mismatch"],"basis":"未提供具体成分且对敏感需求的个性化关怀不足；购买前建议是否构成意图错配有争议。"},
+ {"id":"case_14","positive":[],"unknown":[],"basis":"原注释判断处理不错；询问具体商品属于可选增强。"},
+ {"id":"case_15","positive":["insufficient_empathy"],"unknown":["passive_service"],"basis":"原注释明确对连续受损的安抚力度不足；补偿多少需业务依据，不作为判断条件。"},
+ {"id":"case_16","positive":["missing_clarification"],"unknown":["passive_service"],"basis":"已有预算和场景追问，但未问是哪两款手机，属于局部信息缺口，不等于整体无效。"},
+ {"id":"case_17","positive":[],"unknown":["passive_service","generic_answer","missing_clarification","insufficient_empathy","intent_mismatch"],"basis":"原回复已请求订单号并表示可帮助查询，原注释结论不充分。"},
+ {"id":"case_18","positive":["missing_clarification"],"unknown":[],"basis":"原注释指出未确认退款或换新偏好，属于轻微服务选择缺口。"},
+ {"id":"case_19","positive":["generic_answer","passive_service","missing_clarification"],"unknown":[],"basis":"未确认是哪款包，无从查询具体补货时间。"},
+ {"id":"case_20","positive":["intent_mismatch","missing_clarification"],"unknown":[],"basis":"对操作困难重复流程，未先询问具体卡点。"}
+]

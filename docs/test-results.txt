@@ -1,0 +1,29 @@
+test_boolean_and_nan_scores_rejected (test_pipeline.EvaluationTests.test_boolean_and_nan_scores_rejected) ... ok
+test_case_id_and_input_order_do_not_change_scoring (test_pipeline.EvaluationTests.test_case_id_and_input_order_do_not_change_scoring) ... ok
+test_conflicting_workflows_are_gated (test_pipeline.EvaluationTests.test_conflicting_workflows_are_gated) ... ok
+test_csv_scores_follow_header_not_model_key_order (test_pipeline.EvaluationTests.test_csv_scores_follow_header_not_model_key_order) ... ok
+test_evidence_controls_grounding (test_pipeline.EvaluationTests.test_evidence_controls_grounding) ... ok
+test_evidence_quote_validation (test_pipeline.EvaluationTests.test_evidence_quote_validation) ... ok
+test_full_mock_pipeline (test_pipeline.EvaluationTests.test_full_mock_pipeline) ... ok
+test_html_payload_cannot_close_script (test_pipeline.EvaluationTests.test_html_payload_cannot_close_script) ... ok
+test_http_client_validates_then_caches (test_pipeline.EvaluationTests.test_http_client_validates_then_caches) ... ok
+test_input_rejects_duplicate_id_and_blank_text (test_pipeline.EvaluationTests.test_input_rejects_duplicate_id_and_blank_text) ... ok
+test_instruction_to_check_coupon_is_not_request_for_information (test_pipeline.EvaluationTests.test_instruction_to_check_coupon_is_not_request_for_information) ... ok
+test_model_cannot_self_certify_facts (test_pipeline.EvaluationTests.test_model_cannot_self_certify_facts) ... ok
+test_multi_intent_reply_with_order_request_not_automatically_bad (test_pipeline.EvaluationTests.test_multi_intent_reply_with_order_request_not_automatically_bad) ... ok
+test_negated_request_does_not_satisfy_clarification (test_pipeline.EvaluationTests.test_negated_request_does_not_satisfy_clarification) ... ok
+test_no_claim_does_not_get_grounding_full_marks (test_pipeline.EvaluationTests.test_no_claim_does_not_get_grounding_full_marks) ... ok
+test_overlapping_model_claim_is_not_counted_twice (test_pipeline.EvaluationTests.test_overlapping_model_claim_is_not_counted_twice) ... ok
+test_real_judge_payload_contains_no_reference (test_pipeline.EvaluationTests.test_real_judge_payload_contains_no_reference) ... ok
+test_reference_does_not_change_score (test_pipeline.EvaluationTests.test_reference_does_not_change_score) ... ok
+test_risky_promise_goes_to_review_without_declaring_false (test_pipeline.EvaluationTests.test_risky_promise_goes_to_review_without_declaring_false) ... ok
+test_self_service_can_be_good (test_pipeline.EvaluationTests.test_self_service_can_be_good) ... ok
+test_truncated_api_response_is_rejected (test_pipeline.EvaluationTests.test_truncated_api_response_is_rejected) ... ok
+test_undefined_precision_is_na (test_pipeline.EvaluationTests.test_undefined_precision_is_na) ... ok
+test_unknown_is_not_false (test_pipeline.EvaluationTests.test_unknown_is_not_false) ... ok
+test_unknown_multilabel_pair_excluded (test_pipeline.EvaluationTests.test_unknown_multilabel_pair_excluded) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.076s
+
+OK
